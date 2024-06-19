@@ -1,80 +1,223 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Category Posts</title>
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="../../../../../Desktop/Web/styles.css">
-</head>
-<body>
-    <div id="category-header" class="container-fluid text-center text-light py-5" style="background-size: cover; background-position: center;">
-        <h1 class="display-4" id="category-title"></h1>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="default.css" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm custom-navbar-color p-0 m-0">
+      <div class="container-fluid p-0 m-0">
+        <a class="navbar-brand p-2" href="index.html">
+          <img
+            src="Contact%20Me/Images/Theresia_Travels_Logo_navbar.png"
+            alt="Theresia Travels Logo"
+            width="90"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end m-0 p-0"
+          id="navbarNavAltMarkup"
+        >
+          <div class="navbar-nav">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link active" href="categories.html">Blog</a>
+            <a class="nav-link" href="about-me.html">About Me</a>
+            <a class="nav-link" href="contact-me.html">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      id="category-header"
+      class="container-fluid text-center text-light py-5"
+      style="background-size: cover; background-position: center"
+    >
+      <h1 class="display-4" id="category-title"></h1>
     </div>
 
     <div class="container my-5">
-        <h2 class="mb-4">Posts in <span id="category-name"></span></h2>
-        <div id="posts-list" class="row">
-            <!-- Posts will be dynamically loaded here -->
-        </div>
+      <h2 class="mb-4">Posts in <span id="category-name"></span></h2>
+      <div id="posts-list" class="row">
+        <!-- Posts will be dynamically loaded here -->
+      </div>
     </div>
 
     <!-- Simple Footer -->
-    <footer class="footer bg-dark text-light py-3">
-        <div class="text-center">
-            <p class="mb-0">&copy; 2024 Theresia Deubert. All rights reserved.</p>
-        </div>
+    <footer class="footer bg-dark text-light py-3 fixed-bottom">
+      <div class="text-center">
+        <p class="mb-0" style="color: #faf7f7">
+          &copy; 2024 Henri Ndonko, Roxanne Collett, Theresia Deubert. All
+          rights reserved.
+        </p>
+      </div>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const urlParams = new URLSearchParams(window.location.search);
-            const category = urlParams.get('category');
-            const headerImage = {
-                Technology: 'https://picsum.photos/seed/tech/1200/400',
-                Health: 'https://picsum.photos/seed/health/1200/400',
-                Travel: 'https://picsum.photos/seed/travel/1200/400',
-                Food: 'https://picsum.photos/seed/food/1200/400',
-                Lifestyle: 'https://picsum.photos/seed/lifestyle/1200/400',
-            };
-            const posts = {
-                Technology: [
-                    { title: 'Post 1', image: 'https://picsum.photos/seed/tech1/400/400', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-                    { title: 'Post 2', image: 'https://picsum.photos/seed/tech2/400/400', text: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
-                    { title: 'Post 3', image: 'https://picsum.photos/seed/tech3/400/400', text: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.' }
-                ],
-                Health: [
-                    { title: 'Post A', image: 'https://picsum.photos/seed/health1/400/400', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-                    { title: 'Post B', image: 'https://picsum.photos/seed/health2/400/400', text: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
-                    { title: 'Post C', image: 'https://picsum.photos/seed/health3/400/400', text: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.' }
-                ],
-                Travel: [
-                    { title: 'Post X', image: 'https://picsum.photos/seed/travel1/400/400', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-                    { title: 'Post Y', image: 'https://picsum.photos/seed/travel2/400/400', text: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
-                    { title: 'Post Z', image: 'https://picsum.photos/seed/travel3/400/400', text: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.' }
-                ],
-                Food: [
-                    { title: 'Post AA', image: 'https://picsum.photos/seed/food1/400/400', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-                    { title: 'Post BB', image: 'https://picsum.photos/seed/food2/400/400', text: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
-                    { title: 'Post CC', image: 'https://picsum.photos/seed/food3/400/400', text: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.' }
-                ],
-                Lifestyle: [
-                    { title: 'Post XX', image: 'https://picsum.photos/seed/lifestyle1/400/400', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-                    { title: 'Post YY', image: 'https://picsum.photos/seed/lifestyle2/400/400', text: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
-                    { title: 'Post ZZ', image: 'https://picsum.photos/seed/lifestyle3/400/400', text: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.' }
-                ]
-            };
+      document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const category = urlParams.get("category");
+        const headerImage = {
+          Technology: "https://picsum.photos/seed/tech/1200/400",
+          Health: "https://picsum.photos/seed/health/1200/400",
+          Travel: "https://picsum.photos/seed/travel/1200/400",
+          Food: "https://picsum.photos/seed/food/1200/400",
+          Lifestyle: "https://picsum.photos/seed/lifestyle/1200/400",
+        };
+        const posts = {
+          Technology: [
+            {
+              title: "Post 1",
+              image: "https://picsum.photos/seed/tech1/400/400",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            },
+            {
+              title: "Post 2",
+              image: "https://picsum.photos/seed/tech2/400/400",
+              text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            },
+            {
+              title: "Post 3",
+              image: "https://picsum.photos/seed/tech3/400/400",
+              text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+            },
+          ],
+          Health: [
+            {
+              title: "Post A",
+              image: "https://picsum.photos/seed/health1/400/400",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            },
+            {
+              title: "Post B",
+              image: "https://picsum.photos/seed/health2/400/400",
+              text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            },
+            {
+              title: "Post C",
+              image: "https://picsum.photos/seed/health3/400/400",
+              text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+            },
+          ],
+          Travel: [
+            {
+              title: "Post X",
+              image: "https://picsum.photos/seed/travel1/400/400",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            },
+            {
+              title: "Post Y",
+              image: "https://picsum.photos/seed/travel2/400/400",
+              text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            },
+            {
+              title: "Post Z",
+              image: "https://picsum.photos/seed/travel3/400/400",
+              text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+            },
+          ],
+          Food: [
+            {
+              title: "Post AA",
+              image: "https://picsum.photos/seed/food1/400/400",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            },
+            {
+              title: "Post BB",
+              image: "https://picsum.photos/seed/food2/400/400",
+              text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            },
+            {
+              title: "Post CC",
+              image: "https://picsum.photos/seed/food3/400/400",
+              text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+            },
+          ],
+          Lifestyle: [
+            {
+              title: "Post XX",
+              image: "https://picsum.photos/seed/lifestyle1/400/400",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            },
+            {
+              title: "Post YY",
+              image: "https://picsum.photos/seed/lifestyle2/400/400",
+              text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            },
+            {
+              title: "Post ZZ",
+              image: "https://picsum.photos/seed/lifestyle3/400/400",
+              text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+            },
+          ],
+        };
 
-            document.getElementById('category-header').style.backgroundImage = `url(${headerImage[category]})`;
-            document.getElementById('category-title').textContent = category;
-            document.getElementById('category-name').textContent = category;
+        document.getElementById("category-header").style.backgroundImage =
+          `url(${headerImage[category]})`;
+        document.getElementById("category-title").textContent = category;
+        document.getElementById("category-name").textContent = category;
 
-            const postsList = document.getElementById('posts-list');
-            posts[category].forEach(post => {
-                const postElement = document.createElement('div');
-                postElement.className = 'col-12 col-md-4 mb-4';
-                postElement.innerHTML = `
+        const postsList = document.getElementById("posts-list");
+        posts[category].forEach((post) => {
+          const postElement = document.createElement("div");
+          postElement.className = "col-12 col-md-4 mb-4";
+          postElement.innerHTML = `
                     <div class="card post-card">
                         <img src="${post.image}" class="card-img-top" alt="${post.title}">
                         <div class="card-body">
@@ -83,13 +226,13 @@
                         </div>
                     </div>
                 `;
-                postsList.appendChild(postElement);
-            });
+          postsList.appendChild(postElement);
         });
+      });
     </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-</body>
+  </body>
 </html>

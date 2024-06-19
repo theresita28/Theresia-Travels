@@ -2,7 +2,7 @@ body{
     background-color: #faeff0;
     color: #3B312B;
     font-family: Arial, Helvetica, sans-serif;
-
+    margin: 1rem;
 }
 
 li span {
@@ -12,7 +12,7 @@ li span {
 /*---------------------Breadcrumb menu-------------------------------------------------------------------------*/
 /* Style the list */
 ul.breadcrumb {
-    padding: 10px 16px;
+    padding: 0.6rem 0.1rem;
     list-style: none;
 
 }
@@ -20,12 +20,12 @@ ul.breadcrumb {
 /* Display list items side by side */
 ul.breadcrumb li {
     display: inline;
-    font-size: 18px;
+    font-size: 1.2rem;
 }
 
 /* Add a slash symbol (/) before/behind each list item */
 ul.breadcrumb li+li:before {
-    padding: 8px;
+    padding: 0.5rem;
     color: #3B312B;
     content: "/\00a0";
 }
@@ -46,40 +46,12 @@ ul.breadcrumb li:last-child {
     color: #045635;
 }
 
-/*----------------------Flex 3 Images---------------------------------------------------------------------*/
 
-
-.images3-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; /* Abstand zwischen den Bildern */
-    justify-content: center;
-    /*align-items: center;*/
-}
-
-.image-item {
-    max-width: calc(33.33% - 10px); /* 3 Bilder pro Reihe mit 10px Abstand */
-    flex: 1 1 calc(33.33% - 10px); /* Ermöglicht flexibles Wachstum und Schrumpfen */
-    box-sizing: border-box;
-    text-align: center;
-    margin: 0;
-}
-
-.image-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 10%;
-}
-
-figcaption {
-    margin-top: 5px;
-    font-size: 0.9em;
-    color: #555;
-}
 
 /*Link in der Mitte !!!!!!!!!!!!!!!!*/
 div {
     text-align: center;
+    align-content: center;
 }
 
 
@@ -100,17 +72,32 @@ div button a {
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 0.6rem;
     justify-content: center;
+    /*overflow: hidden;*/
 }
 
-.gallery img {
-    max-width: calc(25% - 10px);
-    /* max-width: 100%; /* Ensure images do not exceed the width */
-    /* height: auto; Maintain the aspect ratio */
+.gallery-item {
+    flex: 1 1 calc(25% - 10px);
+    position: relative;
+    /*padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    box-sizing: border-box;
+    min-width: 8.8rem;
+    /*height: 10rem;*/
+    overflow: hidden;
+    max-width: 50%;
+
+
+}
+
+.gallery-item img, .gallery-item video {
+    /*position: absolute;
+    top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     cursor: pointer;
-    box-sizing: border-box;                        /* So passen wirklich 4 Bilder in eine Reihe*/
-    border: 2px solid #ccc;
     transition: transform 0.2s;
     border-radius: 10%;
 }
@@ -123,30 +110,37 @@ div button a {
     display: none;
     position: fixed;
     z-index: 9999;
-    padding-top: 60px;
+    padding-top: 3.8rem;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
+    overflow: auto;  /*hidden?*/
     background-color: rgba(0, 0, 0, 0.9);
+
+
 }
 
-.lightbox-content {
+.lightbox-content img,
+.lightbox-content video {
     margin: auto;
     display: block;
     width: 80%;
-    max-width: 700px;
+    height: auto;
+    max-width: 44rem;
+    max-height: 37rem;;  /*85 %*/
+
 }
 
 .caption {
     margin: auto;
     display: block;
     width: 80%;
-    max-width: 700px;
+    max-width: 44rem;
     text-align: center;
     color: #ccc;
-    padding: 10px 0;
+    padding: 0.6rem 0;
+    margin-bottom: 1.3rem;
 }
 
 .close,
@@ -155,7 +149,7 @@ div button a {
     position: absolute;
     top: 50%;
     color: #f1f1f1;
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: bold;
     cursor: pointer;
     user-select: none;
@@ -163,8 +157,8 @@ div button a {
 }
 
 .close {
-    top: 15px;
-    right: 35px;
+    top: 1rem;
+    right: 2.2rem;
 }
 
 .prev {

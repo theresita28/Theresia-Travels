@@ -9,11 +9,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentIndex;
 
-    galleryImages.forEach((image, index) => {
-        image.addEventListener('click', () => {
+    galleryItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
             lightbox.style.display = 'block';
-            lightboxImage.src = image.src;
-            caption.innerHTML = image.getAttribute('data-caption') || image.alt;
+            if (item.querySelector('img')) {
+                lightboxContent.innerHTML = `<img src="${item.querySelector('img').src}" alt="${item.querySelector('img').alt}">`;
+                caption.innerHTML = item.querySelector('img').getAttribute('data-caption') || item.querySelector('img').alt;
+            } else if (item.querySelector('video')) {
+                const videoSource = item.querySelector('video source').src;
+                lightboxContent.innerHTML = `<video controls style="width: 100%; height: auto;"><source src="${videoSource}" type="video/mp4"></video>`;
+                caption.innerHTML = item.querySelector('video').innerText;
+            }
             currentIndex = index;
         });
     });
@@ -29,8 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function showImage(index) {
-        lightboxImage.src = galleryImages[index].src;
-        caption.innerHTML = galleryImages[index].getAttribute('data-caption') || galleryImages[index].alt;
+        const item = galleryItems[index];
+        if (item.querySelector('img')) {
+            lightboxContent.innerHTML = `<img src="${item.querySelector('img').src}" alt="${item.querySelector('img').alt}">`;
+            caption.innerHTML = item.querySelector('img').getAttribute('data-caption') || item.querySelector('img').alt;
+        } else if (item.querySelector('video')) {
+            const videoSource = item.querySelector('video source').src;
+            lightboxContent.innerHTML = `<video controls style="width: 100%; height: auto;"><source src="${videoSource}" type="video/mp4"></video>`;
+            caption.innerHTML = item.querySelector('video').innerText;
+        }
     }
 
     prev.addEventListener('click', () => {
