@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zacatlan</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script defer>
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Page 1 specific location
+            const pageLocation = [19.935219473938798, -97.9598821703503] ;
+            initMap(pageLocation);
+        });
+    </script>
+</head>
+<body>
+<main>
+    <h1 id="top">An unforgettable visit to Zacatlán</h1>
+
+    <ul class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Puebla</a></li>
+        <li>Zacatlán</li>
+    </ul>
+
+    <p>In May this year, we visited the charming city of Zacatlán in the state of Puebla,
+        known for its impressive murals and the famous Reloj Floral. Travelling to Zacatlán was not only
+        an opportunity to experience the breathtaking nature and rich culture, but also an adventure full of new
+        impressions and discoveries.</p>
+
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+
+
+    <h2>Travelling to Zacatlán</h2>
+
+    <p>Zacatlán is relatively easy to reach. The nearest airport is Puebla Airport
+        (Hermanos Serdán International Airport), which is around 130 kilometres away.
+        There are various ways to reach the city from the airport:
+    <ul>
+        <li><span>By car</span>: the journey takes around two hours. It is advisable to hire
+            a car to have the flexibility to explore the surrounding sights comfortably.</li>
+        <li><span>By public transport</span>: There are regular bus services from Puebla to Zacatlán.
+            The bus journey takes around three hours and offers a cost-effective alternative to travelling by car.</li>
+    </ul>
+    </p>
+
+    <h2>Weather and best time to visit </h2>
+    <p>Zacatlán has a temperate climate with mild temperatures all year round.
+        The best time to visit Zacatlán is from March to May and from September to November.
+        During these months, temperatures are pleasant and rainfall is minimal. During the summer months (June to August)
+        it can rain more frequently, but this bathes the landscape in a lush green colour and makes the natural wonders even
+        more impressive.</p>
+
+
+
+    <h2>Getting around Zacatlán</h2>
+    <p>In Zacatlán itself, it is easy to get around on foot, especially in the city centre.
+        For more distant destinations, such as the Piedras Encimadas nature reserve, it is advisable to hire a car
+        or use a local taxi or transport service.</p>
+
+    <h2>Places of interest in Zacatlán</h2>
+    <p>Our trip to Zacatlán began with a visit to the Piedras Encimadas Nature Reserve, an area full of fascinating rock
+        formations. This natural wonder offers numerous hiking trails and breathtaking views that will delight any nature lover.</br>
+        In the evening, we explored the town and enjoyed an enchanting puppet show in the clock museum, an experience that
+        fascinates young and old alike. The following day was dedicated to exploring Zacatlán's cultural treasures.
+        We admired the colourful murals that characterise the cityscape and the magnificent Reloj Floral, a floral clock
+        that is considered the city's landmark. The view of the gorge rounded off our day perfectly.</p>
+
+
+    <div class="gallery">
+        <div class="gallery-item"><img src="Pictures/Zacatlan/20230506_152030.jpg" alt="Piedras Encimadas" data-caption="Piedras Encimadas"></div>
+        <div class="gallery-item"><img src="Pictures/Zacatlan/20230506_153948(0).jpg" alt="Piedras Encimadas" data-caption="Piedras Encimadas"></div>
+        <div class="gallery-item"><img src="Pictures/Zacatlan/20230507_103229.jpg" alt="mural" data-caption="Mural"></div>
+        <div class="gallery-item"><img src="Pictures/Zacatlan/20230507_105708.jpg" alt="mural" data-caption="Mural"></div>
+        <div class="gallery-item"><img src="Pictures/Zacatlan/20230507_111135.jpg" alt="mural" data-caption="Mural"></div>
+        <div class="gallery-item"><img src="Pictures/Zacatlan/20230507_111857.jpg" alt="Me at the gorge" data-caption="Me at the gorge"></div>
+        <div class="gallery-item"><img src="Pictures/Zacatlan/20230507_115038.jpg" alt="Clock of Flowers" data-caption="Reloj Floral"></div>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <span class="prev">&#10094;</span>
+        <div class="lightbox-content" id="lightbox-content"></div>
+        <span class="next">&#10095;</span>
+        <div class="caption" id="caption"></div>
+    </div>
+
+    <h2>Culinary experiences in Zacatlán </h2>
+    <p>Zacatlán offers a variety of culinary delights. Some recommended restaurants are:
+    <ul>
+        <li><span>El Turista Café</span>: Famous for its traditional dishes and cosy atmosphere.</li>
+        <li><span>Restaurante La Terraza</span>: With magnificent views of the surroundings and a selection of regional specialities.</li>
+        <li><span>El Mirador</span>: A perfect place to enjoy a delicious meal with a breathtaking view.</li>
+    </ul>
+    </p>
+
+    <h2>Value for money and budget</h2>
+    <p>Zacatlán is an affordable destination that offers a great balance between experience and cost.
+        Accommodation ranges from budget guesthouses to comfortable hotels that cater for all budgets.
+        An average daily budget of 40 to 60 USD per person is enough to travel comfortably, eat well and visit the main sights.</p>
+
+
+    <h2>Conclusion </h2>
+    <p>Zacatlán is a hidden gem in Mexico that delights with its rich culture, impressive nature and warm hospitality.
+        Whether you are looking for an adventure in nature, discover cultural treasures or simply want to unwind, Zacatlán
+        has something for everyone. Pack your bags and let yourself be enchanted by the magic of this wonderful city!</p>
+    <div>
+        <button ><a href="#top" >Back to top</a></button>
+
+    </div>
+
+</main>
+</body>
+</html>

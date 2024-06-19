@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #333;
+}
+
+.social-media a:hover {
+    color: #0073e6;
+}
+
+.btn-primary {
+    background-color: #6a584D;
+    border-color: #6a584D;
+}
+
+.btn-primary:hover {
+    background-color: #ff6201;
+    border-color: #6a584D;
+}
+
+footer.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    color: #ffffff;
+}
+
+.category-card, .post-card {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.category-card:hover, .post-card:hover {
+    transform: scale(1.05);
+}
+
+.category-card .card-body, .post-card .card-body {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: white;
+}
+
+.post-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.post-card .card-body {
+    color: black;
+    background: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}

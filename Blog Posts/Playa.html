@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playa del Carmen</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script defer>
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Page 1 specific location
+            const pageLocation = [20.630077186066217, -87.07217569601053] ;
+            initMap(pageLocation);
+        });
+    </script>
+</head>
+<body>
+<main>
+
+    <h1 id="top">A Journey Through Playa del Carmen</h1>
+
+    <ul class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Quintana Roo</a></li>
+        <li>Playa del Carmen</li>
+    </ul>
+
+    <p> After an exciting time in Cancún, we traveled to Playa del Carmen, a lively town known for its beautiful beaches,
+        vibrant nightlife, and proximity to ancient Mayan sites. Our time in Playa del Carmen was a blend of relaxation, cultural
+        exploration, and unforgettable experiences.
+    </p>
+
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+
+    <h2>Getting to Playa del Carmen</h2>
+    <p>We traveled from Cancún to Playa del Carmen, a journey of about an hour by car or bus. Playa del Carmen is
+        easily accessible and well-connected by road.</p>
+
+
+    <h2>Weather and Best Time to Visit</h2>
+
+    <p>Playa del Carmen enjoys a tropical climate, making it an ideal destination year-round. The best time to visit is during
+        the dry season, from December to April, when the weather is most favorable for beach activities and exploring the town</p>
+
+
+
+    <h2>Our Playa del Carmen Adventure</h2>
+    <h3>Day 1: Arrival</h3>
+    <p>We arrived in Playa del Carmen on Thursday evening and checked into our Airbnb. After settling in, we headed to the
+        nearby beach and spent the evening enjoying the serene atmosphere and stunning views.</p>
+
+    <div class="gallery">
+        <div class="gallery-item"><img src="Pictures/PlayaTulum/20221229_182447 (1).jpg" alt="Beach in Playa del Carmen"></div>
+        <div class="gallery-item"><img src="Pictures/PlayaTulum/20221230_105845 (1).jpg" alt="Beach in Playa del Carmen"></div>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <span class="prev">&#10094;</span>
+        <div class="lightbox-content" id="lightbox-content"></div>
+        <span class="next">&#10095;</span>
+        <div class="caption" id="caption"></div>
+    </div>
+
+    <h3>Day 2: Tulum and Beach Day</h3>
+    <p>On Friday, we traveled to Tulum to visit the famous ruins. The archaeological site, perched on a cliff overlooking the
+        turquoise sea, was breathtaking. After exploring the ruins, we spent the rest of the day relaxing on Tulum's pristine beach,
+        enjoying the white sand and clear waters.</p>
+
+    <div class="gallery">
+        <div class="gallery-item"><img src="Pictures/PlayaTulum/20221230_134509 (1).jpg" alt="Ruins in Tulum with sea" data-caption="Ruins in Tulum"></div>
+        <div class="gallery-item"><img src="Pictures/PlayaTulum/20221230_152658 (1).jpg" alt="Beach in Tulum"></div>
+    </div>
+
+    <h3>Day 3: New Year's Eve in Cozumel</h3>
+    <p>We took a day trip to the island of Cozumel on New Year’s Eve. Our snorkeling tour was the highlight of the trip.
+        We explored three different spots, each offering unique underwater experiences. At the first spot, we saw a vibrant coral
+        reef, a turtle, and a ray. The second spot featured crystal-clear water with numerous starfish. The final stop allowed us
+        to stand in the shallow turquoise water and enjoy ceviche while taking in the surroundings.<br>
+        Returning to Playa del Carmen, we got ready for the New Year's Eve celebrations. We headed to the town center to watch the
+        fireworks on the beach, providing a fantastic backdrop to ring in the New Year.</p>
+
+    <div class="gallery">
+        <div class="gallery-item"><img src="Pictures/PlayaTulum/20221231_164842 (1).jpg" alt="Sea at Snorkeling Tour" data-caption="Sea at Snorkeling Tour"></div>
+        <div class="gallery-item"><img src="Pictures/PlayaTulum/20221231_164903 (1).jpg" alt="Sea at Snorkeling Tour with a catamaran" data-caption="Sea at Snorkeling Tour"></div>
+        <div class="gallery-item"><img src="Pictures/PlayaTulum/20221231_165539 (1).jpg" alt="Sea with People stand in the sea" data-caption=" "></div>
+        <div class="gallery-item"><img src="Pictures/PlayaTulum/20230101_000122 (1).jpg" alt="New Year Firework at Beach" data-caption="New Year Firework at Beach"></div>
+        <div class="gallery-item"><img src="Pictures/PlayaTulum/20230101_003328 (1).jpg" alt="Letters Playa 23 with a Crowd" data-caption="New Year in the center of Playa del Carmen"></div>
+
+    </div>
+
+
+
+    <h2>Places to Eat in Playa del Carmen</h2>
+    <p>Playa del Carmen is known for its diverse culinary scene:
+    <ul>
+        <li><span>La Cueva del Chango</span>: Offers delicious Mexican dishes in a lush, jungle-like setting.</li>
+        <li><span>Alux Restaurant Bar and Lounge</span>: A unique dining experience inside a natural cave.</li>
+        <li><span>El Fogón</span>: Famous for its authentic tacos and casual atmosphere</li>
+    </ul>
+    </p>
+
+
+    <h2>Value for Money and Budget</h2>
+    <p>Playa del Carmen provides a range of accommodations to suit all budgets, from affordable hostels to luxurious resorts.
+        Daily expenses, including meals, activities, and transportation, can be managed on a budget of 50 to 100 USD per person.</p>
+
+    <h2>Things to See and Do</h2>
+    <p>Playa del Carmen offers a variety of attractions and activities:
+    <ul>
+        <li><span>Visit Tulum Ruins</span>: Explore the ancient Mayan ruins with a stunning ocean backdrop.</li>
+        <li><span>Snorkeling in Cozumel</span>: Discover the vibrant underwater world and diverse marine life</li>
+        <li><span>Relax on the Beaches</span>: Enjoy the beautiful beaches of Playa del Carmen and Tulum.</li>
+        <li><span>Experience the Nightlife</span>: The town offers numerous bars, clubs, and live music venues for a fun night out.</li>
+    </ul>
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>Playa del Carmen is a captivating destination that offers a perfect mix of relaxation, adventure, and cultural
+        experiences. Our time here was filled with beautiful beaches, ancient ruins, and vibrant celebrations, making it a
+        must-visit spot on any travel itinerary.</p>
+
+    <div>
+        <button ><a href="#top" >Back to top</a></button>
+
+    </div>
+
+</main>
+</body>
+</html>

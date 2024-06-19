@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlixco</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script defer>
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Page 1 specific location
+            const pageLocation = [18.911888835986502, -98.42949600335147] ;
+            initMap(pageLocation);
+        });
+    </script>
+</head>
+<body>
+<main>
+    <h1 id="top">Discovering the Charm of Atlixco</h1>
+
+    <ul class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Puebla</a></li>
+        <li>Atlixco</li>
+    </ul>
+
+    <p> One Sunday in September, I embarked on my first journey to Atlixco, a picturesque town just about three quarters of an
+        hour away from Cholula/Puebla. Known for its beautiful landscapes and rich cultural traditions, Atlixco offers visitors
+        a delightful blend of history, art, and festivities.
+    </p>
+
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+
+    <h2>Getting to Atlixco</h2>
+
+    <p> Atlixco is conveniently located and can be easily accessed by various means:
+    <ul>
+        <li><span>By Car</span>: The drive from Cholula or Puebla to Atlixco takes approximately 45 minutes.
+            Renting a car provides flexibility and convenience for exploring the area. </li>
+        <li><span>By Bus</span>: Regular bus services run from Puebla to Atlixco, making it an affordable and straightforward option.
+            The journey takes about an hour.</li>
+    </ul>
+
+    </p>
+
+    <h2>Weather and Best Time to Visit</h2>
+
+    <p>Atlixco enjoys a temperate climate, making it an ideal destination year-round. However, visiting during September and
+        December offers unique experiences with local festivals and seasonal events.</p>
+
+
+    <h2>Our Atlixco Adventure</h2>
+
+    <p>During our visit in September, we wandered around the charming old town center, which was bustling with activity due
+        to a local feria (fair). The vibrant stalls and festive atmosphere provided a wonderful glimpse into the local culture and
+        community.</p>
+
+    <p>Atlixco bears a resemblance to Cholula, particularly with its church perched on a hill. Climbing up to the church rewarded us
+        with a stunning view of the surrounding countryside. Along the way, we witnessed the incredible performance of the Voladores de Papantla,
+        an ancient tradition practiced for over a thousand years in honor of the gods of fertility. Watching the voladores descend
+        gracefully from a 30-meter-high pole was a breathtaking experience.</p>
+
+    <div class="gallery">
+
+        <div class="gallery-item"> <img src="Pictures/Atlixco/IMG_20221023_184412_854.jpg" alt="Street in Atlixco" data-caption=" "> </div>
+        <div class="gallery-item">   <img src="Pictures/Atlixco/IMG_20221023_184412_957.jpg" alt="Beautiful house - the town hall of Atlixco" data-caption="The town hall of Atlixco"> </div>
+        <div class="gallery-item">    <img src="Pictures/Atlixco/IMG_20221023_184413_022.jpg" alt="Mural" data-caption=" "> </div>
+        <div class="gallery-item">    <img src="Pictures/Atlixco/IMG_20221023_184413_196.jpg" alt="Mural" data-caption=" "> </div>
+        <div class="gallery-item"><img src="Pictures/Atlixco/IMG_20221023_184413_241.jpg" alt="Painting at steps" data-caption="The painted steps"> </div>
+
+        <div class="gallery-item">
+            <video width="320" height="240" controls>
+                <source src="Pictures/Atlixco/20220925-164818_64V3OWxO.mp4" type="video/mp4">
+
+                Video about the Voladores de Papantla
+            </video> </div>
+        <div class="gallery-item">    <img src="Pictures/Atlixco/IMG_20221023_184413_346.jpg" alt="Different corn cubs with colors " data-caption="The different corn sorts"> </div>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <span class="prev">&#10094;</span>
+        <div class="lightbox-content" id="lightbox-content"></div>
+
+        <span class="next">&#10095;</span>
+        <div class="caption" id="caption"></div>
+    </div>
+
+    <p>In October, I returned to Atlixco and was greeted by Catrina figures set up in various locations around the town. These
+        iconic skeleton figures symbolize Dia de los Muertos and trace their origins to the painter Jose Guadalupe Posada, who
+        created the ‘Calavera Garbancera’ in 1912. Posada’s figure criticized domestic workers aspiring to the lifestyle of wealthy
+        ladies in post-revolutionary Mexico City, and today, Catrinas are a vibrant part of Mexican culture and festivities. </p>
+
+    <div class="gallery">
+        <div class="gallery-item">   <img src="Pictures/Atlixco/20221022_160543.jpg" alt="Woman surrounded by flowers" data-caption=" "> </div>
+        <div class="gallery-item">   <img src="Pictures/Atlixco/20221022_161421.jpg" alt="a woman skeleton figure" data-caption="Catrina"> </div>
+        <div class="gallery-item">   <img src="Pictures/Atlixco/20221022_180213.jpg" alt="a man skeleton figure" data-caption="Catrina"> </div>
+        <div class="gallery-item">   <img src="Pictures/Atlixco/20221022_182724.jpg" alt="skeleton figure"data-caption="Catrina" > </div>
+        <div class="gallery-item">   <img src="Pictures/Atlixco/20221022_200115.jpg" alt="skeleton figure" data-caption="Catrina"> </div>
+        <div class="gallery-item">   <img src="Pictures/Atlixco/20221022_205711.jpg" alt="skeleton figure" data-caption="Catrina"> </div>
+
+    </div>
+
+    <!-- <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-image">
+        <div class="caption" id="caption"></div>
+    </div> -->
+    <p>In December, Atlixco transforms into a winter wonderland with its Villa Iluminada. The streets are adorned with beautiful
+        fairy lights, creating a magical atmosphere. Visitors can take photos with Santa, the Grinch, and various other beloved characters
+        like Batman and Minions, making it a delightful experience for families and children.</p>
+
+    <div class="gallery">
+        <div class="gallery-item"><img src="Pictures/Atlixco/20221219_194353.jpg" alt="Street with fairy lights " data-caption=" "></div>
+        <div class="gallery-item"><img src="Pictures/Atlixco/20221219_194854.jpg" alt="Street with fairy lights that says Atlixco" data-caption=" "></div>
+        <div class="gallery-item"><img src="Pictures/Atlixco/20221219_195326.jpg" alt="Street with fairy lights that says Feliz Navidad" data-caption=" "></div>
+
+
+    </div>
+    <!--  <div class="images3-container">
+         <figure class="image-item">
+             <img src="Pictures/Atlixco/20221219_194353.jpg" alt="Street with fairy lights ">
+
+         </figure>
+         <figure class="image-item">
+             <img src="Pictures/Atlixco/20221219_194854.jpg" alt="Street with fairy lights that says Atlixco">
+
+         </figure>
+         <figure class="image-item">
+             <img src="Pictures/Atlixco/20221219_195326.jpg" alt="Street with fairy lights that says Feliz Navidad">
+
+         </figure>
+     </div> -->
+
+    <h2>Places to Eat in Atlixco</h2>
+
+    <p>Atlixco offers a variety of dining options where you can savor traditional Mexican cuisine:
+    <ul>
+        <li><span>El Mural de los Poblanos</span>: Known for its authentic Pueblan dishes and beautiful murals. </li>
+        <li><span>Las Calandrias</span>: Offers a charming atmosphere and a diverse menu, perfect for a relaxing meal after exploring the town.</li>
+        <li><span>Café de la Cruz</span>: A cozy café ideal for enjoying a coffee and pastries while soaking in the local ambiance.</li>
+    </ul>
+    </p>
+
+
+    <h2>Value for Money and Budget</h2>
+
+    <p>Atlixco is an affordable destination with options for all budgets. From budget-friendly inns to more comfortable hotels,
+        accommodations are reasonably priced. Daily expenses, including meals and activities, can be managed comfortably on a budget
+        of 30 to 50 USD per person.</p>
+
+    <h2>Things to See and Do</h2>
+
+    <p>Atlixco is rich in cultural and natural attractions:
+    <ul>
+        <li><span>Visit the Old Town Center</span>: Explore the historic buildings, vibrant markets, and enjoy the local fairs.</li>
+        <li><span>Witness the Voladores de Papantla</span>: Experience this mesmerizing traditional performance</li>
+        <li><span>Climb to the Church on the Hill</span>: Enjoy panoramic views of the surrounding landscape.</li>
+        <li><span>Explore the Catrina Figures</span>: Visit during October to see these iconic figures and learn about their cultural significance.</li>
+        <li><span>Experience Villa Iluminada</span>: Wander through the beautifully lit streets during December and take photos with festive characters.</li>
+    </ul>
+    </p>
+
+
+    <h2>Conclusion</h2>
+
+    <p>Atlixco is a hidden gem that offers a rich tapestry of cultural experiences, historical landmarks, and festive events.
+        Whether you're marveling at the ancient traditions of the Voladores de Papantla, admiring the artistic Catrina figures, or
+        enjoying the magical Villa Iluminada, Atlixco promises an enchanting and memorable visit. Pack your bags and discover the
+        charm and beauty of this delightful town!</p>
+
+    <div>
+        <button ><a href="#top" >Back to top</a></button>
+
+    </div>
+
+</main>
+
+
+
+
+
+</body>
+</html>

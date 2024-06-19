@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Categories</title>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+            rel="stylesheet" />
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="default.css" />
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-5">Blog Categories</h1>
+        <div class="row">
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card category-card" onclick="loadCategory('Technology')" style="background-image: url('https://picsum.photos/seed/tech/400/400');">
+                    <div class="card-body d-flex align-items-end">
+                        <h5 class="card-title text-white">Technology</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card category-card" onclick="loadCategory('Health')" style="background-image: url('https://picsum.photos/seed/health/400/400');">
+                    <div class="card-body d-flex align-items-end">
+                        <h5 class="card-title text-white">Health</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card category-card" onclick="loadCategory('Travel')" style="background-image: url('https://picsum.photos/seed/travel/400/400');">
+                    <div class="card-body d-flex align-items-end">
+                        <h5 class="card-title text-white">Travel</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card category-card" onclick="loadCategory('Food')" style="background-image: url('https://picsum.photos/seed/food/400/400');">
+                    <div class="card-body d-flex align-items-end">
+                        <h5 class="card-title text-white">Food</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card category-card" onclick="loadCategory('Lifestyle')" style="background-image: url('https://picsum.photos/seed/lifestyle/400/400');">
+                    <div class="card-body d-flex align-items-end">
+                        <h5 class="card-title text-white">Lifestyle</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Simple Footer -->
+    <footer class="footer bg-dark text-light py-3">
+        <div class="text-center">
+            <p class="mb-0">&copy; 2024 Theresia Deubert. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function loadCategory(category) {
+            window.location.href = `category_posts.html?category=${category}`;
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+/* ---------- Contact Me ---------- */
+.contact-me-intro {
+    padding: 0 2rem;
+    max-width: 500px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+}
+
+/* ---------- Form ---------- */
+.container {
+    padding: 0 2rem;
+}
+
+.form-control:focus {
+    border-color: #bcf4de;
+    outline: 1px solid #a1d1be;
+    box-shadow: 0 0 5px 1px rgba(59, 49, 43, 0.3);
+}
+
+.form-control {
+    background-color: #fcfafa;
+}
+
+.btn {
+    background-color: #3b312b;
+    border: none;
+    color: #faf7f7;
+}
+
+.btn:hover {
+    background-color: #5bae8d;
+}
+
+/* Style for custom error messages */
+.is-invalid {
+    border-color: #dc3545;
+}
+
+/* Style for error message text */
+.error-message {
+    color: #dc3545;
+    display: none;
+    font-size: 0.875em;
+}

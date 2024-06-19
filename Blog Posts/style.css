@@ -1,0 +1,200 @@
+body{
+    background-color: #faeff0;
+    color: #3B312B;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+li span {
+    font-weight: bold;
+}
+
+/*---------------------Breadcrumb menu-------------------------------------------------------------------------*/
+/* Style the list */
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: #3B312B;
+    content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+    color: #3B312B;
+    text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+ul.breadcrumb li:last-child {
+    color: #045635;
+}
+
+/*----------------------Flex 3 Images---------------------------------------------------------------------*/
+
+
+.images3-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Abstand zwischen den Bildern */
+    justify-content: center;
+    /*align-items: center;*/
+}
+
+.image-item {
+    max-width: calc(33.33% - 10px); /* 3 Bilder pro Reihe mit 10px Abstand */
+    flex: 1 1 calc(33.33% - 10px); /* Ermöglicht flexibles Wachstum und Schrumpfen */
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+}
+
+figcaption {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/*Link in der Mitte !!!!!!!!!!!!!!!!*/
+div {
+    text-align: center;
+}
+
+
+div button {
+    display: inline-block;
+    background-color: #3B312B;
+    border-radius: 10%;
+    color: #faeff0;
+}
+
+div button a {
+    color: #faeff0;
+    text-decoration: none;
+}
+
+
+/*-------------------------------Gallery with Lightbox Effect---------------------------*/
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery img {
+    max-width: calc(25% - 10px);
+    /* max-width: 100%; /* Ensure images do not exceed the width */
+    /* height: auto; Maintain the aspect ratio */
+    cursor: pointer;
+    box-sizing: border-box;                        /* So passen wirklich 4 Bilder in eine Reihe*/
+    border: 2px solid #ccc;
+    transition: transform 0.2s;
+    border-radius: 10%;
+}
+
+/* .gallery img:hover {
+  transform: scale(1.05);
+} */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+.close,
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+}
+
+.close {
+    top: 15px;
+    right: 35px;
+}
+
+.prev {
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.next {
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.close:hover,
+.close:focus,
+.prev:hover,
+.prev:focus,
+.next:hover,
+.next:focus {
+    color: #bbb;
+}
+
+/*-----------------------------Map---------------------------------------------------*/
+#map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#map {
+    height: 20em;
+    width: 50%;
+
+}
