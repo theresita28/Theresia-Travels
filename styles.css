@@ -45,16 +45,6 @@ body {
   border: none;
 }
 
-#category-header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(59, 49, 43, 0.5);
-}
-
 #category-header {
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -69,6 +59,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#category-header .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(59, 49, 43, 0.5);
+  z-index: 1;
+}
+
+#category-header h1 {
+  z-index: 2;
+  position: relative;
+  font-weight: 400;
 }
 
 .category-card,
