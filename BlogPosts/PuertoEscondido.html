@@ -1,29 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Puerto Escondido</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      defer
+    ></script>
     <script defer>
-
-
-        document.addEventListener('DOMContentLoaded', () => {
-            // Page 1 specific location
-            const pageLocation = [15.872090360959687, -97.07841186459767] ;
-            initMap(pageLocation);
-        });
+      document.addEventListener("DOMContentLoaded", () => {
+        // Page 1 specific location
+        const pageLocation = [15.872090360959687, -97.07841186459767];
+        initMap(pageLocation);
+      });
     </script>
     <!-- Bootstrap -->
     <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-            crossorigin="anonymous" />
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../default.css" />
@@ -32,166 +37,242 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-            href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
-            rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap Icons -->
     <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
     <!-- Bootstrap JS -->
     <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"
-            defer></script>
-</head>
-<body>
-<div class="content">
-<!-- Navbar -->
-<nav class="navbar navbar-expand-sm custom-navbar-color p-0 m-0">
-    <div class="container-fluid p-0 m-0">
-        <a class="navbar-brand p-2" href="../index.html">
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div class="content">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-sm custom-navbar-color p-0 m-0">
+        <div class="container-fluid p-0 m-0">
+          <a class="navbar-brand p-2" href="../index.html">
             <img
-                    src="ContactMe/Images/Theresia_Travels_Logo_navbar.png"
-                    alt="Theresia Travels Logo"
-                    width="90"
-                    class="d-inline-block align-text-top" />
-        </a>
-        <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
+              src="../ContactMe/Images/Theresia_Travels_Logo_navbar.png"
+              alt="Theresia Travels Logo"
+              width="90"
+              class="d-inline-block align-text-top"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-                class="collapse navbar-collapse justify-content-end m-0 p-0"
-                id="navbarNavAltMarkup">
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end m-0 p-0"
+            id="navbarNavAltMarkup"
+          >
             <div class="navbar-nav">
-                <a class="nav-link" href="../index.html">Home</a>
-                <a class="nav-link active" href="../categories.html">Blog</a>
-                <a class="nav-link" href="../about-me.html">About Me</a>
-                <a class="nav-link" href="../contact-me.html">Contact Me</a>
+              <a class="nav-link" href="../index.html">Home</a>
+              <a class="nav-link active" href="../categories.html">Blog</a>
+              <a class="nav-link" href="../about-me.html">About Me</a>
+              <a class="nav-link" href="../contact-me.html">Contact Me</a>
             </div>
+          </div>
         </div>
-    </div>
-</nav>
-<main>
-    <h1 id="top">Discovering the Magic of Puerto Escondido</h1>
+      </nav>
+      <main>
+        <h1 id="top">Discovering the Magic of Puerto Escondido</h1>
 
-    <ul class="breadcrumb">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../categories.html">Blog</a></li>
-        <li><a href="#">Oaxaca</a></li>
-        <li>Puerto Escondido</li>
-    </ul>
+        <ul class="breadcrumb">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../categories.html">Blog</a></li>
+          <li><a href="#">Oaxaca</a></li>
+          <li>Puerto Escondido</li>
+        </ul>
 
-    <p>In April, we spent a few unforgettable days in Puerto Escondido, a coastal town in Oaxaca, Mexico.
-        Known for its stunning beaches and vibrant surf culture, Puerto Escondido offers a blend of adventure and
-        relaxation that's hard to find elsewhere.</p>
-
-    <div id="map-container">
-        <div id="map"></div>
-    </div>
-
-    <h2>Getting to Puerto Escondido</h2>
-
-    <p>Puerto Escondido is accessible by various means:
-    <ul>
-        <li><span>By Plane</span>: The closest airport is Puerto Escondido International Airport (PXM), which is just a
-            short drive from the town center. Direct flights are available from Mexico City and other major
-            Mexican cities.</li>
-        <li><span>By Bus</span>: There are several bus services from Oaxaca City, taking about 10-12 hours due to the winding mountain roads.
-            It’s a scenic, albeit lengthy, journey.</li>
-        <li><span>By Car</span>: Renting a car can provide more flexibility for exploring the surrounding areas. The drive from
-            Oaxaca City takes approximately seven hours.</li>
-    </ul>
-    </p>
-
-    <h2>Weather and Best Time to Visit</h2>
-    <p>Puerto Escondido enjoys a tropical climate, with warm temperatures year-round. The best time to visit is during the
-        dry season, from November to April, when the weather is most pleasant and there's minimal rainfall. We visited during
-        the Easter holidays, which is a busy time, but the vibrant atmosphere made it worthwhile. </p>
-
-
-    <h2>Our Adventure in Puerto Escondido</h2>
-    <p>On our first day, we explored the beaches near our accommodation. Despite the Easter crowds and strong waves that
-        made swimming less enjoyable, we understood why Puerto Escondido is a surfer's paradise. The waves were impressive, and
-        watching the surfers was exhilarating.<br>
-        In the evening, I had the unique experience of releasing a baby turtle at a local NGO dedicated to turtle conservation.
-        It was a touching moment, seeing the tiny creature make its way to the sea.<br>
-        The following day, we sought out a quieter beach for swimming and relaxing. The tranquil setting was perfect for
-        unwinding and enjoying the natural beauty of the area. That evening, we visited Laguna de Manialtepec to witness the
-        magical bioluminescence. Swimming in the lagoon and seeing the plankton glow around us was an awe-inspiring experience
-        that we'll never forget.</p>
-
-    <div class="gallery">
-        <div class="gallery-item"><img src="Pictures/PuertoEsondido/20230409_115131.jpg" alt="Playa Carrizalillo"></div>
-        <div class="gallery-item"><img src="Pictures/PuertoEsondido/20230409_173440.jpg" alt="Baby turtle" data-caption="Baby turtle which I released"></div>
-        <div class="gallery-item"><img src="Pictures/PuertoEsondido/20230410_135844.jpg" alt="Playa Coral"></div>
-    </div>
-
-    <div id="lightbox" class="lightbox">
-        <span class="close">&times;</span>
-        <span class="prev">&#10094;</span>
-        <div class="lightbox-content" id="lightbox-content"></div>
-        <span class="next">&#10095;</span>
-        <div class="caption" id="caption"></div>
-    </div>
-
-    <h2>Places to Eat in Puerto Escondido</h2>
-
-    <p>Puerto Escondido offers a variety of dining options to suit all tastes:
-    <ul>
-        <li><span>El Cafecito</span>: A popular spot for breakfast and brunch, known for its delicious pastries and hearty meals.</li>
-        <li><span>Costenito Cevicheria</span>: Offers fresh seafood with a beautiful ocean view.</li>
-        <li><span>Almoraduz Cocina de Autor</span>: Perfect for those looking for a gourmet dining experience with a touch of Oaxacan flair.</li>
-    </ul>
-    </p>
-
-    <h2>Value for Money and Budget</h2>
-
-    <p>Puerto Escondido caters to all budgets. From budget-friendly hostels and guesthouses to luxurious beach resorts,
-        there’s something for everyone. Daily expenses, including meals, activities, and transportation, can be managed
-        comfortably on a budget of 50 to 70 USD per person.</p>
-
-    <h2>Things to See and Do</h2>
-
-    <p>In addition to its famous beaches, Puerto Escondido offers a range of activities:
-    <ul>
-        <li><span>Surfing</span>: Zicatela Beach is renowned for its powerful waves and is a must-visit for surf enthusiasts.</li>
-        <li><span>Turtle Release</span>: Participate in conservation efforts by releasing baby turtles into the ocean.</li>
-        <li><span>Bioluminescence Tour</span>: Take a night tour to Laguna de Manialtepec and swim amidst the glowing plankton.</li>
-        <li><span>Visit the Mercado Benito Juárez</span>: Explore this local market for a taste of Oaxacan cuisine and culture.</li>
-    </ul>
-    </p>
-
-    <h2>Conclusion</h2>
-
-    <p>Puerto Escondido is a gem on the Oaxacan coast, offering a mix of adventure, relaxation, and unique experiences.
-        Whether you’re a surfer, a nature lover, or simply looking to unwind by the sea, Puerto Escondido has something
-        to offer everyone. Pack your bags and get ready to explore the magic of this beautiful destination!</p>
-
-    <div>
-        <button ><a href="#top" >Back to top</a></button>
-
-    </div>
-
-</main>
-</div>
-<!-- Footer-->
-<footer class="footer py-3">
-    <div class="text-center">
-        <p class="mb-0 footer-text">
-            &copy; 2024 Henri Ndonko, Roxanne Collett, Theresia Deubert. All
-            rights reserved.
+        <p>
+          In April, we spent a few unforgettable days in Puerto Escondido, a
+          coastal town in Oaxaca, Mexico. Known for its stunning beaches and
+          vibrant surf culture, Puerto Escondido offers a blend of adventure and
+          relaxation that's hard to find elsewhere.
         </p>
+
+        <div id="map-container">
+          <div id="map"></div>
+        </div>
+
+        <h2>Getting to Puerto Escondido</h2>
+
+        <p>Puerto Escondido is accessible by various means:</p>
+        <ul>
+          <li>
+            <span>By Plane</span>: The closest airport is Puerto Escondido
+            International Airport (PXM), which is just a short drive from the
+            town center. Direct flights are available from Mexico City and other
+            major Mexican cities.
+          </li>
+          <li>
+            <span>By Bus</span>: There are several bus services from Oaxaca
+            City, taking about 10-12 hours due to the winding mountain roads.
+            It’s a scenic, albeit lengthy, journey.
+          </li>
+          <li>
+            <span>By Car</span>: Renting a car can provide more flexibility for
+            exploring the surrounding areas. The drive from Oaxaca City takes
+            approximately seven hours.
+          </li>
+        </ul>
+
+        <h2>Weather and Best Time to Visit</h2>
+        <p>
+          Puerto Escondido enjoys a tropical climate, with warm temperatures
+          year-round. The best time to visit is during the dry season, from
+          November to April, when the weather is most pleasant and there's
+          minimal rainfall. We visited during the Easter holidays, which is a
+          busy time, but the vibrant atmosphere made it worthwhile.
+        </p>
+
+        <h2>Our Adventure in Puerto Escondido</h2>
+        <p>
+          On our first day, we explored the beaches near our accommodation.
+          Despite the Easter crowds and strong waves that made swimming less
+          enjoyable, we understood why Puerto Escondido is a surfer's paradise.
+          The waves were impressive, and watching the surfers was
+          exhilarating.<br />
+          In the evening, I had the unique experience of releasing a baby turtle
+          at a local NGO dedicated to turtle conservation. It was a touching
+          moment, seeing the tiny creature make its way to the sea.<br />
+          The following day, we sought out a quieter beach for swimming and
+          relaxing. The tranquil setting was perfect for unwinding and enjoying
+          the natural beauty of the area. That evening, we visited Laguna de
+          Manialtepec to witness the magical bioluminescence. Swimming in the
+          lagoon and seeing the plankton glow around us was an awe-inspiring
+          experience that we'll never forget.
+        </p>
+
+        <div class="gallery">
+          <div class="gallery-item">
+            <img
+              src="Pictures/PuertoEsondido/20230409_115131.jpg"
+              alt="Playa Carrizalillo"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Pictures/PuertoEsondido/20230409_173440.jpg"
+              alt="Baby turtle"
+              data-caption="Baby turtle which I released"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Pictures/PuertoEsondido/20230410_135844.jpg"
+              alt="Playa Coral"
+            />
+          </div>
+        </div>
+
+        <div id="lightbox" class="lightbox">
+          <span class="close">&times;</span>
+          <span class="prev">&#10094;</span>
+          <div class="lightbox-content" id="lightbox-content"></div>
+          <span class="next">&#10095;</span>
+          <div class="caption" id="caption"></div>
+        </div>
+
+        <h2>Places to Eat in Puerto Escondido</h2>
+
+        <p>
+          Puerto Escondido offers a variety of dining options to suit all
+          tastes:
+        </p>
+        <ul>
+          <li>
+            <span>El Cafecito</span>: A popular spot for breakfast and brunch,
+            known for its delicious pastries and hearty meals.
+          </li>
+          <li>
+            <span>Costenito Cevicheria</span>: Offers fresh seafood with a
+            beautiful ocean view.
+          </li>
+          <li>
+            <span>Almoraduz Cocina de Autor</span>: Perfect for those looking
+            for a gourmet dining experience with a touch of Oaxacan flair.
+          </li>
+        </ul>
+
+        <h2>Value for Money and Budget</h2>
+
+        <p>
+          Puerto Escondido caters to all budgets. From budget-friendly hostels
+          and guesthouses to luxurious beach resorts, there’s something for
+          everyone. Daily expenses, including meals, activities, and
+          transportation, can be managed comfortably on a budget of 50 to 70 USD
+          per person.
+        </p>
+
+        <h2>Things to See and Do</h2>
+
+        <p>
+          In addition to its famous beaches, Puerto Escondido offers a range of
+          activities:
+        </p>
+        <ul>
+          <li>
+            <span>Surfing</span>: Zicatela Beach is renowned for its powerful
+            waves and is a must-visit for surf enthusiasts.
+          </li>
+          <li>
+            <span>Turtle Release</span>: Participate in conservation efforts by
+            releasing baby turtles into the ocean.
+          </li>
+          <li>
+            <span>Bioluminescence Tour</span>: Take a night tour to Laguna de
+            Manialtepec and swim amidst the glowing plankton.
+          </li>
+          <li>
+            <span>Visit the Mercado Benito Juárez</span>: Explore this local
+            market for a taste of Oaxacan cuisine and culture.
+          </li>
+        </ul>
+
+        <h2>Conclusion</h2>
+
+        <p>
+          Puerto Escondido is a gem on the Oaxacan coast, offering a mix of
+          adventure, relaxation, and unique experiences. Whether you’re a
+          surfer, a nature lover, or simply looking to unwind by the sea, Puerto
+          Escondido has something to offer everyone. Pack your bags and get
+          ready to explore the magic of this beautiful destination!
+        </p>
+
+        <div>
+          <button class="btn btn-primary">
+            <a href="#top">Back to top</a>
+          </button>
+        </div>
+      </main>
     </div>
-</footer>
-</body>
+    <!-- Footer-->
+    <footer class="footer py-3">
+      <div class="text-center">
+        <p class="mb-0 footer-text">
+          &copy; 2024 Henri Ndonko, Roxanne Collett, Theresia Deubert. All
+          rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
