@@ -54,3 +54,16 @@
 .theresia-portrait {
   margin: 2rem 0 0.5rem 0;
 }
+
+.alignMiddle {
+  display: flex; /* Ensure the div itself is a flex container */
+  justify-content: center; /* Center horizontally */
+  align-content: center;
+  align-items: center;
+  width: 75%;
+}
+
+.parent {
+  display: flex;
+  justify-content: center; /* Center child elements horizontally */
+}
