@@ -1,31 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zacatlan</title>
-        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      defer
+    ></script>
     <script defer>
-
-
-        document.addEventListener('DOMContentLoaded', () => {
-
-            const pageLocation = [19.935219473938798, -97.9598821703503] ;
-            initMap(pageLocation);
-        });
+      document.addEventListener("DOMContentLoaded", () => {
+        const pageLocation = [19.935219473938798, -97.9598821703503];
+        initMap(pageLocation);
+      });
     </script>
     <!-- Bootstrap -->
     <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-            crossorigin="anonymous" />
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../default.css" />
@@ -34,163 +38,250 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-            href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
-            rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap Icons -->
     <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
     <!-- Bootstrap JS -->
     <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"
-            defer></script>
-</head>
-<body>
-<div class="content">
-<!-- Navbar -->
-<nav class="navbar navbar-expand-sm custom-navbar-color p-0 m-0">
-    <div class="container-fluid p-0 m-0">
-        <a class="navbar-brand p-2" href="../index.html">
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div class="content">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-sm custom-navbar-color p-0 m-0">
+        <div class="container-fluid p-0 m-0">
+          <a class="navbar-brand p-2" href="../index.html">
             <img
-                    src="../ContactMe/Images/Theresia_Travels_Logo_navbar.png"
-                    alt="Theresia Travels Logo"
-                    width="90"
-                    class="d-inline-block align-text-top" />
-        </a>
-        <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
+              src="../ContactMe/Images/Theresia_Travels_Logo_navbar.png"
+              alt="Theresia Travels Logo"
+              width="90"
+              class="d-inline-block align-text-top"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-                class="collapse navbar-collapse justify-content-end m-0 p-0"
-                id="navbarNavAltMarkup">
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end m-0 p-0"
+            id="navbarNavAltMarkup"
+          >
             <div class="navbar-nav">
-                <a class="nav-link" href="../index.html">Home</a>
-                <a class="nav-link active" href="../categories.html">Blog</a>
-                <a class="nav-link" href="../about-me.html">About Me</a>
-                <a class="nav-link" href="../contact-me.html">Contact Me</a>
+              <a class="nav-link" href="../index.html">Home</a>
+              <a class="nav-link active" href="../categories.html">Blog</a>
+              <a class="nav-link" href="../about-me.html">About Me</a>
+              <a class="nav-link" href="../contact-me.html">Contact Me</a>
             </div>
+          </div>
         </div>
-    </div>
-</nav>
-<main>
-    <h1 id="top">An unforgettable visit to Zacatlán</h1>
+      </nav>
+      <main>
+        <h1 id="top">An unforgettable visit to Zacatlán</h1>
 
-    <ul class="breadcrumb">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../categories.html">Blog</a></li>
-        <li><a href="../category_posts.html?category=Puebla">Puebla</a></li>
-        <li>Zacatlán</li>
-    </ul>
+        <ul class="breadcrumb">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../categories.html">Blog</a></li>
+          <li><a href="../category_posts.html?category=Puebla">Puebla</a></li>
+          <li>Zacatlán</li>
+        </ul>
 
-    <p>In May this year, we visited the charming city of Zacatlán in the state of Puebla,
-        known for its impressive murals and the famous Reloj Floral. Travelling to Zacatlán was not only
-        an opportunity to experience the breathtaking nature and rich culture, but also an adventure full of new
-        impressions and discoveries.</p>
-
-    <div id="map-container">
-        <div id="map"></div>
-    </div>
-
-
-    <h2>Travelling to Zacatlán</h2>
-
-    <p>Zacatlán is relatively easy to reach. The nearest airport is Puebla Airport
-        (Hermanos Serdán International Airport), which is around 130 kilometres away.
-        There are various ways to reach the city from the airport:
-    <ul>
-        <li><span>By car</span>: the journey takes around two hours. It is advisable to hire
-            a car to have the flexibility to explore the surrounding sights comfortably.</li>
-        <li><span>By public transport</span>: There are regular bus services from Puebla to Zacatlán.
-            The bus journey takes around three hours and offers a cost-effective alternative to travelling by car.</li>
-    </ul>
-    </p>
-
-    <h2>Weather and best time to visit </h2>
-    <p>Zacatlán has a temperate climate with mild temperatures all year round.
-        The best time to visit Zacatlán is from March to May and from September to November.
-        During these months, temperatures are pleasant and rainfall is minimal. During the summer months (June to August)
-        it can rain more frequently, but this bathes the landscape in a lush green colour and makes the natural wonders even
-        more impressive.</p>
-
-
-
-    <h2>Getting around Zacatlán</h2>
-    <p>In Zacatlán itself, it is easy to get around on foot, especially in the city centre.
-        For more distant destinations, such as the Piedras Encimadas nature reserve, it is advisable to hire a car
-        or use a local taxi or transport service.</p>
-
-    <h2>Places of interest in Zacatlán</h2>
-    <p>Our trip to Zacatlán began with a visit to the Piedras Encimadas Nature Reserve, an area full of fascinating rock
-        formations. This natural wonder offers numerous hiking trails and breathtaking views that will delight any nature lover.</br>
-        In the evening, we explored the town and enjoyed an enchanting puppet show in the clock museum, an experience that
-        fascinates young and old alike. The following day was dedicated to exploring Zacatlán's cultural treasures.
-        We admired the colourful murals that characterise the cityscape and the magnificent Reloj Floral, a floral clock
-        that is considered the city's landmark. The view of the gorge rounded off our day perfectly.</p>
-
-
-    <div class="gallery">
-        <div class="gallery-item"><img src="Pictures/Zacatlan/20230506_152030.JPG" alt="Piedras Encimadas" data-caption="Piedras Encimadas"></div>
-        <div class="gallery-item"><img src="Pictures/Zacatlan/20230506_153948(0).JPG" alt="Piedras Encimadas" data-caption="Piedras Encimadas"></div>
-        <div class="gallery-item"><img src="Pictures/Zacatlan/20230507_103229.JPG" alt="mural" data-caption="Mural"></div>
-        <div class="gallery-item"><img src="Pictures/Zacatlan/20230507_105708.JPG" alt="mural" data-caption="Mural"></div>
-        <div class="gallery-item"><img src="Pictures/Zacatlan/20230507_111135.JPG" alt="mural" data-caption="Mural"></div>
-        <div class="gallery-item"><img src="Pictures/Zacatlan/20230507_111857.JPG" alt="Theresia at the gorge" data-caption="Me at the gorge"></div>
-        <div class="gallery-item"><img src="Pictures/Zacatlan/20230507_115038.JPG" alt="Clock of Flowers" data-caption="Reloj Floral"></div>
-    </div>
-
-    <div id="lightbox" class="lightbox">
-        <span class="close">&times;</span>
-        <span class="prev">&#10094;</span>
-        <div class="lightbox-content" id="lightbox-content"></div>
-        <span class="next">&#10095;</span>
-        <div class="caption" id="caption"></div>
-    </div>
-
-    <h2>Culinary experiences in Zacatlán </h2>
-    <p>Zacatlán offers a variety of culinary delights. Some recommended restaurants are:
-    <ul>
-        <li><span>El Turista Café</span>: Famous for its traditional dishes and cosy atmosphere.</li>
-        <li><span>Restaurante La Terraza</span>: With magnificent views of the surroundings and a selection of regional specialities.</li>
-        <li><span>El Mirador</span>: A perfect place to enjoy a delicious meal with a breathtaking view.</li>
-    </ul>
-    </p>
-
-    <h2>Value for money and budget</h2>
-    <p>Zacatlán is an affordable destination that offers a great balance between experience and cost.
-        Accommodation ranges from budget guesthouses to comfortable hotels that cater for all budgets.
-        An average daily budget of 40 to 60 USD per person is enough to travel comfortably, eat well and visit the main sights.</p>
-
-
-    <h2>Conclusion </h2>
-    <p>Zacatlán is a hidden gem in Mexico that delights with its rich culture, impressive nature and warm hospitality.
-        Whether you are looking for an adventure in nature, discover cultural treasures or simply want to unwind, Zacatlán
-        has something for everyone. Pack your bags and let yourself be enchanted by the magic of this wonderful city!</p>
-    <div class="btn-center">
-        <button class="btn btn-primary"><a href="#top" >Back to top</a></button>
-
-    </div>
-
-</main>
-</div>
-<!-- Footer-->
-<footer class="footer py-3">
-    <div class="text-center">
-        <p class="mb-0 footer-text">
-            &copy; 2024 Henri Ndonko, Roxanne Collett, Theresia Deubert. All
-            rights reserved.
+        <p>
+          In May this year, we visited the charming city of Zacatlán in the
+          state of Puebla, known for its impressive murals and the famous Reloj
+          Floral. Travelling to Zacatlán was not only an opportunity to
+          experience the breathtaking nature and rich culture, but also an
+          adventure full of new impressions and discoveries.
         </p>
+
+        <div id="map-container">
+          <div id="map"></div>
+        </div>
+
+        <h2>Travelling to Zacatlán</h2>
+
+        <p>
+          Zacatlán is relatively easy to reach. The nearest airport is Puebla
+          Airport (Hermanos Serdán International Airport), which is around 130
+          kilometres away. There are various ways to reach the city from the
+          airport:
+        </p>
+        <ul>
+          <li>
+            <span>By car</span>: the journey takes around two hours. It is
+            advisable to hire a car to have the flexibility to explore the
+            surrounding sights comfortably.
+          </li>
+          <li>
+            <span>By public transport</span>: There are regular bus services
+            from Puebla to Zacatlán. The bus journey takes around three hours
+            and offers a cost-effective alternative to travelling by car.
+          </li>
+        </ul>
+
+        <h2>Weather and best time to visit</h2>
+        <p>
+          Zacatlán has a temperate climate with mild temperatures all year
+          round. The best time to visit Zacatlán is from March to May and from
+          September to November. During these months, temperatures are pleasant
+          and rainfall is minimal. During the summer months (June to August) it
+          can rain more frequently, but this bathes the landscape in a lush
+          green colour and makes the natural wonders even more impressive.
+        </p>
+
+        <h2>Getting around Zacatlán</h2>
+        <p>
+          In Zacatlán itself, it is easy to get around on foot, especially in
+          the city centre. For more distant destinations, such as the Piedras
+          Encimadas nature reserve, it is advisable to hire a car or use a local
+          taxi or transport service.
+        </p>
+
+        <h2>Places of interest in Zacatlán</h2>
+        <p>
+          Our trip to Zacatlán began with a visit to the Piedras Encimadas
+          Nature Reserve, an area full of fascinating rock formations. This
+          natural wonder offers numerous hiking trails and breathtaking views
+          that will delight any nature lover.<br />
+          In the evening, we explored the town and enjoyed an enchanting puppet
+          show in the clock museum, an experience that fascinates young and old
+          alike. The following day was dedicated to exploring Zacatlán's
+          cultural treasures. We admired the colourful murals that characterise
+          the cityscape and the magnificent Reloj Floral, a floral clock that is
+          considered the city's landmark. The view of the gorge rounded off our
+          day perfectly.
+        </p>
+
+        <div class="gallery">
+          <div class="gallery-item">
+            <img
+              src="Pictures/Zacatlan/20230506_152030.JPG"
+              alt="Piedras Encimadas"
+              data-caption="Piedras Encimadas"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Pictures/Zacatlan/20230506_153948(0).JPG"
+              alt="Piedras Encimadas"
+              data-caption="Piedras Encimadas"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Pictures/Zacatlan/20230507_103229.JPG"
+              alt="mural"
+              data-caption="Mural"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Pictures/Zacatlan/20230507_105708.JPG"
+              alt="mural"
+              data-caption="Mural"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Pictures/Zacatlan/20230507_111135.JPG"
+              alt="mural"
+              data-caption="Mural"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Pictures/Zacatlan/20230507_111857.JPG"
+              alt="Theresia at the gorge"
+              data-caption="Me at the gorge"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Pictures/Zacatlan/20230507_115038.JPG"
+              alt="Clock of Flowers"
+              data-caption="Reloj Floral"
+            />
+          </div>
+        </div>
+
+        <div id="lightbox" class="lightbox">
+          <span class="close">&times;</span>
+          <span class="prev">&#10094;</span>
+          <div class="lightbox-content" id="lightbox-content"></div>
+          <span class="next">&#10095;</span>
+          <div class="caption" id="caption"></div>
+        </div>
+
+        <h2>Culinary experiences in Zacatlán</h2>
+        <p>
+          Zacatlán offers a variety of culinary delights. Some recommended
+          restaurants are:
+        </p>
+        <ul>
+          <li>
+            <span>El Turista Café</span>: Famous for its traditional dishes and
+            cosy atmosphere.
+          </li>
+          <li>
+            <span>Restaurante La Terraza</span>: With magnificent views of the
+            surroundings and a selection of regional specialities.
+          </li>
+          <li>
+            <span>El Mirador</span>: A perfect place to enjoy a delicious meal
+            with a breathtaking view.
+          </li>
+        </ul>
+
+        <h2>Value for money and budget</h2>
+        <p>
+          Zacatlán is an affordable destination that offers a great balance
+          between experience and cost. Accommodation ranges from budget
+          guesthouses to comfortable hotels that cater for all budgets. An
+          average daily budget of 40 to 60 USD per person is enough to travel
+          comfortably, eat well and visit the main sights.
+        </p>
+
+        <h2>Conclusion</h2>
+        <p>
+          Zacatlán is a hidden gem in Mexico that delights with its rich
+          culture, impressive nature and warm hospitality. Whether you are
+          looking for an adventure in nature, discover cultural treasures or
+          simply want to unwind, Zacatlán has something for everyone. Pack your
+          bags and let yourself be enchanted by the magic of this wonderful
+          city!
+        </p>
+        <div class="btn-center">
+          <button class="btn btn-primary">
+            <a href="#top">Back to top</a>
+          </button>
+        </div>
+      </main>
     </div>
-</footer>
-</body>
+    <!-- Footer-->
+    <footer class="footer py-3">
+      <div class="text-center">
+        <p class="mb-0 footer-text">
+          &copy; 2024 Henri Ndonko, Roxanne Collett, Theresia Deubert. All
+          rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

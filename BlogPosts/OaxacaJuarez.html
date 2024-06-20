@@ -1,210 +1,315 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oaxaca de Juarez</title>
-        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      defer
+    ></script>
     <script defer>
-
-
-        document.addEventListener('DOMContentLoaded', () => {
-
-            const pageLocation = [17.074003216219268, -96.73003641516577] ;
-            initMap(pageLocation);
-        });
+      document.addEventListener("DOMContentLoaded", () => {
+        const pageLocation = [17.074003216219268, -96.73003641516577];
+        initMap(pageLocation);
+      });
     </script>
     <!-- Bootstrap -->
     <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-            crossorigin="anonymous" />
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../default.css" />
-
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-            href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
-            rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap Icons -->
     <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
     <!-- Bootstrap JS -->
     <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"
-            defer></script>
-</head>
-<body>
-<div class="content">
-<!-- Navbar -->
-<nav class="navbar navbar-expand-sm custom-navbar-color p-0 m-0">
-    <div class="container-fluid p-0 m-0">
-        <a class="navbar-brand p-2" href="../index.html">
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div class="content">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-sm custom-navbar-color p-0 m-0">
+        <div class="container-fluid p-0 m-0">
+          <a class="navbar-brand p-2" href="../index.html">
             <img
-                    src="../ContactMe/Images/Theresia_Travels_Logo_navbar.png"
-                    alt="Theresia Travels Logo"
-                    width="90"
-                    class="d-inline-block align-text-top" />
-        </a>
-        <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
+              src="../ContactMe/Images/Theresia_Travels_Logo_navbar.png"
+              alt="Theresia Travels Logo"
+              width="90"
+              class="d-inline-block align-text-top"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-                class="collapse navbar-collapse justify-content-end m-0 p-0"
-                id="navbarNavAltMarkup">
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end m-0 p-0"
+            id="navbarNavAltMarkup"
+          >
             <div class="navbar-nav">
-                <a class="nav-link" href="../index.html">Home</a>
-                <a class="nav-link active" href="../categories.html">Blog</a>
-                <a class="nav-link" href="../about-me.html">About Me</a>
-                <a class="nav-link" href="../contact-me.html">Contact Me</a>
+              <a class="nav-link" href="../index.html">Home</a>
+              <a class="nav-link active" href="../categories.html">Blog</a>
+              <a class="nav-link" href="../about-me.html">About Me</a>
+              <a class="nav-link" href="../contact-me.html">Contact Me</a>
             </div>
+          </div>
         </div>
-    </div>
-</nav>
-<main>
-    <h1 id="top">Exploring the Cultural Riches of Oaxaca de Juárez</h1>
+      </nav>
+      <main>
+        <h1 id="top">Exploring the Cultural Riches of Oaxaca de Juárez</h1>
 
-    <ul class="breadcrumb">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../categories.html">Blog</a></li>
-        <li><a href="../category_posts.html?category=Oaxaca">Oaxaca</a></li>
-        <li>Oaxaca de Juarez</li>
-    </ul>
+        <ul class="breadcrumb">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../categories.html">Blog</a></li>
+          <li><a href="../category_posts.html?category=Oaxaca">Oaxaca</a></li>
+          <li>Oaxaca de Juarez</li>
+        </ul>
 
-    <p>In April, we embarked on an unforgettable journey to Oaxaca de Juárez, the vibrant capital city of the state of Oaxaca.
-        Known for its rich cultural heritage, stunning archaeological sites, and delectable cuisine, Oaxaca de Juárez offers an
-        immersive experience into the heart of Mexican tradition.</p>
-
-    <div id="map-container">
-        <div id="map"></div>
-    </div>
-
-    <h2>Getting to Oaxaca de Juárez</h2>
-    <p>Oaxaca de Juárez is well-connected and accessible by various means:
-    <ul>
-        <li><span>By Plane</span>: The closest airport is Xoxocotlán International Airport (OAX), located about
-            12 kilometers south of the city center. Direct flights are available from major Mexican cities like Mexico City,
-            Monterrey, and Guadalajara.</li>
-        <li><span>By Bus</span>: There are comfortable bus services from Mexico City, Puebla, and other nearby cities. The journey from Mexico
-            City takes approximately six to seven hours.</li>
-        <li><span>By Car</span>: Driving to Oaxaca de Juárez can be a scenic experience, especially if you're traveling from Puebla or Mexico City.
-            The journey offers stunning views of the countryside and takes around five to six hours.</li>
-    </ul>
-    </p>
-
-
-    <h2>Weather and Best Time to Visit</h2>
-    <p>Oaxaca de Juárez enjoys a mild climate year-round, with warm days and cool nights.
-        The best time to visit is during the dry season, from November to April, when the weather is most pleasant
-        for sightseeing and outdoor activities.</p>
-
-    <h2>Our Oaxaca de Juárez Adventure</h2>
-    <p>On our first day, we explored the heart of Oaxaca de Juárez. We wandered through the Zócalo,
-        the bustling market square, where we soaked in the vibrant atmosphere and browsed through the local markets.
-        The Zócalo is a great place to experience the city's lively culture, with street vendors, musicians, and artisans
-        showcasing their crafts.</p>
-
-    <p>The following day, we visited the awe-inspiring archaeological site of Monte Albán. Perched on a hilltop,
-        Monte Albán offers panoramic views of the Oaxaca Valley and a fascinating glimpse into the ancient Zapotec civilization.
-        The site is vast, with impressive pyramids, plazas, and carved stone monuments.</p>
-
-    <div class="gallery">
-        <div class="gallery-item"><img src="Pictures/Oaxaca/20230403_155826.jpg" alt="Santo Domingo Church"></div>
-        <div class="gallery-item"><img src="Pictures/Oaxaca/20230404_111817.jpg" alt="Theresia at Monte Alban"></div>
-        <div class="gallery-item"><img src="Pictures/Oaxaca/20230412_132712.jpg" alt="Street beautiful decorated and with a beautiful murals" data-caption="Street in Oaxaca de Juarez " ></div>
-    </div>
-
-
-    <div id="lightbox" class="lightbox">
-        <span class="close">&times;</span>
-        <span class="prev">&#10094;</span>
-        <div class="lightbox-content" id="lightbox-content"></div>
-        <span class="next">&#10095;</span>
-        <div class="caption" id="caption"></div>
-    </div>
-
-    <p>On the third day, our journey took us to Mitla, another significant archaeological site known for its intricate stone
-        mosaics and rich history. From Mitla, we traveled to Hierve el Agua the next day. Hierve el Agua is a natural wonder
-        featuring petrified waterfalls and natural pools. Swimming in these pools with a breathtaking view of the surrounding
-        mountains was a highlight of our trip. </p>
-
-    <div class="gallery">
-        <div class="gallery-item"><img src="Pictures/Oaxaca/20230406_110302.jpg" alt="View to the natural pools"></div>
-        <div class="gallery-item"><img src="Pictures/Oaxaca/20230406_112315.jpg" alt="Petrified Waterfall"></div>
-        <div class="gallery-item"><img src="Pictures/Oaxaca/20230406_143239.jpg" alt="Natural pool with view at the mountains" data-caption="Natural pool"></div>
-    </div>
-
-    <p>On our last day in Oaxaca de Juárez, we indulged in some shopping for souvenirs. The local markets offered a variety
-        of unique items, including handcrafted textiles, pottery, and the famous Oaxacan chocolate, a regional specialty that
-        makes for a delightful gift. </p>
-
-    <h2>Places to Eat in Oaxaca de Juárez</h2>
-    <p>Oaxaca de Juárez is a food lover's paradise, with numerous dining options that showcase the rich flavors of Oaxacan cuisine:
-    <ul>
-        <li><span>La Biznaga</span>: Offers a modern twist on traditional Oaxacan dishes with a cozy, relaxed atmosphere.</li>
-        <li><span>Casa Oaxaca</span>: Renowned for its gourmet take on local flavors, featuring beautifully presented dishes.</li>
-        <li><span>Mercado 20 de Noviembre</span>: A bustling market where you can sample a variety of traditional Oaxacan foods, including tlayudas, mole, and tamales.</li>
-    </ul>
-    </p>
-
-    <h2>Value for Money and Budget</h2>
-    <p>Oaxaca de Juárez offers excellent value for money, with a range of accommodations from budget hostels to luxury hotels.
-        Daily expenses, including meals, transportation, and entrance fees, can be managed comfortably on a budget of 40 to 60
-        USD per person.</p>
-
-    <h2>Things to See and Do</h2>
-    <p>In addition to its renowned archaeological sites, Oaxaca de Juárez offers a plethora of activities and attractions:
-    <ul>
-        <li><span>Visit the Santo Domingo Church and Cultural Center</span>: Explore the stunning Baroque architecture and the adjacent museum showcasing regional artifacts.</li>
-        <li><span>Stroll through the Ethnobotanical Garden</span>: Discover the diverse plant life native to Oaxaca and learn about their traditional uses.</li>
-        <li><span>Explore the Textile Museum</span>: Delve into the rich textile heritage of Oaxaca, with beautiful displays of traditional weaving techniques and designs.</li>
-    </ul>
-    </p>
-
-    <h2>Conclusion</h2>
-    <p>Oaxaca de Juárez is a treasure trove of cultural and historical wonders, offering a rich and immersive experience for
-        every traveler. From its vibrant markets and ancient ruins to its delectable cuisine and scenic natural pools, Oaxaca
-        de Juárez promises a journey full of discovery and delight. Pack your bags and get ready to explore the magic of this
-        captivating city!</p>
-
-    <div class="btn-center">
-        <button class="btn btn-primary"><a href="#top" >Back to top</a></button>
-    </div>
-
-</main>
-</div>
-<!-- Footer-->
-<footer class="footer py-3">
-    <div class="text-center">
-        <p class="mb-0 footer-text">
-            &copy; 2024 Henri Ndonko, Roxanne Collett, Theresia Deubert. All
-            rights reserved.
+        <p>
+          In April, we embarked on an unforgettable journey to Oaxaca de Juárez,
+          the vibrant capital city of the state of Oaxaca. Known for its rich
+          cultural heritage, stunning archaeological sites, and delectable
+          cuisine, Oaxaca de Juárez offers an immersive experience into the
+          heart of Mexican tradition.
         </p>
-    </div>
-</footer>
 
-</body>
+        <div id="map-container">
+          <div id="map"></div>
+        </div>
+
+        <h2>Getting to Oaxaca de Juárez</h2>
+        <p>
+          Oaxaca de Juárez is well-connected and accessible by various means:
+        </p>
+        <ul>
+          <li>
+            <span>By Plane</span>: The closest airport is Xoxocotlán
+            International Airport (OAX), located about 12 kilometers south of
+            the city center. Direct flights are available from major Mexican
+            cities like Mexico City, Monterrey, and Guadalajara.
+          </li>
+          <li>
+            <span>By Bus</span>: There are comfortable bus services from Mexico
+            City, Puebla, and other nearby cities. The journey from Mexico City
+            takes approximately six to seven hours.
+          </li>
+          <li>
+            <span>By Car</span>: Driving to Oaxaca de Juárez can be a scenic
+            experience, especially if you're traveling from Puebla or Mexico
+            City. The journey offers stunning views of the countryside and takes
+            around five to six hours.
+          </li>
+        </ul>
+
+        <h2>Weather and Best Time to Visit</h2>
+        <p>
+          Oaxaca de Juárez enjoys a mild climate year-round, with warm days and
+          cool nights. The best time to visit is during the dry season, from
+          November to April, when the weather is most pleasant for sightseeing
+          and outdoor activities.
+        </p>
+
+        <h2>Our Oaxaca de Juárez Adventure</h2>
+        <p>
+          On our first day, we explored the heart of Oaxaca de Juárez. We
+          wandered through the Zócalo, the bustling market square, where we
+          soaked in the vibrant atmosphere and browsed through the local
+          markets. The Zócalo is a great place to experience the city's lively
+          culture, with street vendors, musicians, and artisans showcasing their
+          crafts.
+        </p>
+
+        <p>
+          The following day, we visited the awe-inspiring archaeological site of
+          Monte Albán. Perched on a hilltop, Monte Albán offers panoramic views
+          of the Oaxaca Valley and a fascinating glimpse into the ancient
+          Zapotec civilization. The site is vast, with impressive pyramids,
+          plazas, and carved stone monuments.
+        </p>
+
+        <div class="gallery">
+          <div class="gallery-item">
+            <img
+              src="Pictures/Oaxaca/20230403_155826.jpg"
+              alt="Santo Domingo Church"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Pictures/Oaxaca/20230404_111817.jpg"
+              alt="Theresia at Monte Alban"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Pictures/Oaxaca/20230412_132712.jpg"
+              alt="Street beautiful decorated and with a beautiful murals"
+              data-caption="Street in Oaxaca de Juarez "
+            />
+          </div>
+        </div>
+
+        <div id="lightbox" class="lightbox">
+          <span class="close">&times;</span>
+          <span class="prev">&#10094;</span>
+          <div class="lightbox-content" id="lightbox-content"></div>
+          <span class="next">&#10095;</span>
+          <div class="caption" id="caption"></div>
+        </div>
+
+        <p>
+          On the third day, our journey took us to Mitla, another significant
+          archaeological site known for its intricate stone mosaics and rich
+          history. From Mitla, we traveled to Hierve el Agua the next day.
+          Hierve el Agua is a natural wonder featuring petrified waterfalls and
+          natural pools. Swimming in these pools with a breathtaking view of the
+          surrounding mountains was a highlight of our trip.
+        </p>
+
+        <div class="gallery">
+          <div class="gallery-item">
+            <img
+              src="Pictures/Oaxaca/20230406_110302.jpg"
+              alt="View to the natural pools"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Pictures/Oaxaca/20230406_112315.jpg"
+              alt="Petrified Waterfall"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Pictures/Oaxaca/20230406_143239.jpg"
+              alt="Natural pool with view at the mountains"
+              data-caption="Natural pool"
+            />
+          </div>
+        </div>
+
+        <p>
+          On our last day in Oaxaca de Juárez, we indulged in some shopping for
+          souvenirs. The local markets offered a variety of unique items,
+          including handcrafted textiles, pottery, and the famous Oaxacan
+          chocolate, a regional specialty that makes for a delightful gift.
+        </p>
+
+        <h2>Places to Eat in Oaxaca de Juárez</h2>
+        <p>
+          Oaxaca de Juárez is a food lover's paradise, with numerous dining
+          options that showcase the rich flavors of Oaxacan cuisine:
+        </p>
+        <ul>
+          <li>
+            <span>La Biznaga</span>: Offers a modern twist on traditional
+            Oaxacan dishes with a cozy, relaxed atmosphere.
+          </li>
+          <li>
+            <span>Casa Oaxaca</span>: Renowned for its gourmet take on local
+            flavors, featuring beautifully presented dishes.
+          </li>
+          <li>
+            <span>Mercado 20 de Noviembre</span>: A bustling market where you
+            can sample a variety of traditional Oaxacan foods, including
+            tlayudas, mole, and tamales.
+          </li>
+        </ul>
+
+        <h2>Value for Money and Budget</h2>
+        <p>
+          Oaxaca de Juárez offers excellent value for money, with a range of
+          accommodations from budget hostels to luxury hotels. Daily expenses,
+          including meals, transportation, and entrance fees, can be managed
+          comfortably on a budget of 40 to 60 USD per person.
+        </p>
+
+        <h2>Things to See and Do</h2>
+        <p>
+          In addition to its renowned archaeological sites, Oaxaca de Juárez
+          offers a plethora of activities and attractions:
+        </p>
+        <ul>
+          <li>
+            <span>Visit the Santo Domingo Church and Cultural Center</span>:
+            Explore the stunning Baroque architecture and the adjacent museum
+            showcasing regional artifacts.
+          </li>
+          <li>
+            <span>Stroll through the Ethnobotanical Garden</span>: Discover the
+            diverse plant life native to Oaxaca and learn about their
+            traditional uses.
+          </li>
+          <li>
+            <span>Explore the Textile Museum</span>: Delve into the rich textile
+            heritage of Oaxaca, with beautiful displays of traditional weaving
+            techniques and designs.
+          </li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>
+          Oaxaca de Juárez is a treasure trove of cultural and historical
+          wonders, offering a rich and immersive experience for every traveler.
+          From its vibrant markets and ancient ruins to its delectable cuisine
+          and scenic natural pools, Oaxaca de Juárez promises a journey full of
+          discovery and delight. Pack your bags and get ready to explore the
+          magic of this captivating city!
+        </p>
+
+        <div class="btn-center">
+          <button class="btn btn-primary">
+            <a href="#top">Back to top</a>
+          </button>
+        </div>
+      </main>
+    </div>
+    <!-- Footer-->
+    <footer class="footer py-3">
+      <div class="text-center">
+        <p class="mb-0 footer-text">
+          &copy; 2024 Henri Ndonko, Roxanne Collett, Theresia Deubert. All
+          rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
