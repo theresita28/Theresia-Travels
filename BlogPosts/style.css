@@ -38,32 +38,28 @@ ul.breadcrumb li a {
 
 /* Add a color on mouse-over */
 ul.breadcrumb li a:hover {
-    color: #01447e;
+    color: #3b312b;
     text-decoration: underline;
 }
 
 ul.breadcrumb li:last-child {
-    color: #045635;
+    color: #51a483;
 }
 
 
 
-/*Link in der Mitte !!!!!!!!!!!!!!!!*/
-div {
+/*Button*/
+.btn {
     text-align: center;
     align-content: center;
-}
-
-
-div button {
     display: inline-block;
-    background-color: #3B312B;
     border-radius: 10%;
-    color: #faeff0;
+    text-decoration: none;
 }
+
 
 div button a {
-    color: #faeff0;
+    color: #fcfafa;
     text-decoration: none;
 }
 
@@ -75,6 +71,7 @@ div button a {
     gap: 0.6rem;
     justify-content: center;
     /*overflow: hidden;*/
+    margin: 2rem;
 }
 
 .gallery-item {
@@ -133,14 +130,13 @@ div button a {
 }
 
 .caption {
-    margin: auto;
     display: block;
     width: 80%;
     max-width: 44rem;
     text-align: center;
     color: #ccc;
     padding: 0.6rem 0;
-    margin-bottom: 1.3rem;
+    margin: auto auto 1.3rem;
 }
 
 .close,
@@ -186,9 +182,10 @@ div button a {
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin: 1rem;
 }
 #map {
     height: 20em;
-    width: 50%;
+    width: 80%;
 
 }

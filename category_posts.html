@@ -54,10 +54,10 @@
         <div class="container-fluid p-0 m-0">
           <a class="navbar-brand p-2" href="index.html">
             <img
-              src="Contact%20Me/Images/Theresia_Travels_Logo_navbar.png"
+              src="ContactMe/Images/Theresia_Travels_Logo_navbar.png"
               alt="Theresia Travels Logo"
               width="90"
-              class="d-inline-block align-text-top"
+              class="d-inline-block align-text-top img-fluid"
             />
           </a>
           <button
@@ -93,7 +93,7 @@
       </div>
 
       <div class="container my-5" id="posts-in">
-        <h2 class="mb-4">Posts in <span id="category-name"></span></h2>
+        <h2 class="mb-4 bold">Posts in <span id="category-name"></span></h2>
         <div id="posts-list" class="row">
           <!-- Posts will be dynamically loaded here -->
         </div>
@@ -117,13 +117,13 @@
         const headerImage = {
           Puebla: "BlogPosts/Pictures/Zacatlan/20230507_103229.JPG",
           Oaxaca: "BlogPosts/Pictures/PuertoEsondido/20230410_135844.jpg",
-          QuintanaRoo: "BlogPosts/Pictures/Cancun/20221227_145954.jpg",
+          QuintanaRoo: "BlogPosts/Pictures/Cancun/20221228_174639.jpg",
         };
         const posts = {
           Puebla: [
             {
               title: "Zacatlan",
-              image: "BlogPosts/Pictures/Zacatlan/20230507_103229.JPG",
+              image: "BlogPosts/Pictures/Zacatlan/20230507_115038.JPG",
               text: "The charming city of Zacatlán in the state of Puebla.",
             },
             {
@@ -135,7 +135,7 @@
           Oaxaca: [
             {
               title: "Puerto Escondido",
-              image: "BlogPosts/Pictures/PuertoEsondido/20230410_135844.jpg",
+              image: "BlogPosts/Pictures/PuertoEsondido/20230409_115131.jpg",
               text: "Coastal town with stunning beaches",
             },
             {
@@ -152,7 +152,7 @@
             },
             {
               title: "Playa del Carmen",
-              image: "BlogPosts/Pictures/Cancun/20221227_145954.jpg",
+              image: "BlogPosts/Pictures/PlayaTulum/20221230_105845 (1).jpg",
               text: "A lively town known for its beautiful beaches",
             },
           ],
@@ -169,7 +169,7 @@
           postElement.className = "col-12 col-md-4 mb-4";
           postElement.innerHTML = `
                     <div class="card post-card">
-                        <img src="${post.image}" class="card-img-top" alt="${post.title}">
+                        <img src="${post.image}" class="card-img-top img-fluid" alt="${post.title}">
                         <div class="card-body">
                             <h5 class="card-title">${post.title}</h5>
                             <p class="card-text">${post.text}</p>

@@ -7,6 +7,7 @@
 
 h1 {
   font-family: "Cinzel Decorative", serif;
+  text-align: center;
 }
 
 body {
@@ -26,8 +27,22 @@ a:hover {
   color: #3b312b;
 }
 
+main {
+  padding: 2rem;
+}
+
 .content {
   flex: 1;
+}
+
+.btn {
+  background-color: #3b312b;
+  border: none;
+  color: #fcfafa;
+}
+
+.btn:hover {
+  background-color: #51a483;
 }
 
 /* ---------- Navbar ---------- */

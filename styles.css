@@ -57,11 +57,12 @@ body {
 
 .post-card {
   height: fit-content;
+  width: fit-content;
   background-size: cover;
   background-position: center;
-  border: none;
   cursor: pointer;
   transition: transform 0.2s;
+  border: 1px solid #51a483;
 }
 
 .category-card:hover,
@@ -77,8 +78,8 @@ body {
 }
 
 .post-card img {
-  height: 200px;
-  object-fit: cover;
+  /*height: 200px;*/
+  object-fit: contain;
 }
 
 .post-card .card-body {
