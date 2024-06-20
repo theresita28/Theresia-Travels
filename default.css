@@ -23,10 +23,6 @@ a {
   word-break: break-word;
 }
 
-a:hover:not(btn) {
-  color: #3b312b;
-}
-
 main {
   padding: 2rem;
 }

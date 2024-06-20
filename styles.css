@@ -5,12 +5,11 @@ body {
   min-height: 100vh;
 }
 
-
 .container {
-    background-color: #FCFAFA;
-    padding: 45px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .my-5 {
@@ -46,23 +45,14 @@ body {
   border: none;
 }
 
-.category-card{
+.category-card,
+.post-card {
   height: 200px;
   background-size: cover;
   background-position: center;
   border: none;
   cursor: pointer;
   transition: transform 0.2s;
-}
-
-.post-card {
-  height: fit-content;
-  width: fit-content;
-  background-size: cover;
-  background-position: center;
-  cursor: pointer;
-  transition: transform 0.2s;
-  border: 1px solid #51a483;
 }
 
 .category-card:hover,
@@ -78,8 +68,8 @@ body {
 }
 
 .post-card img {
-  /*height: 200px;*/
-  object-fit: contain;
+  height: 200px;
+  object-fit: cover;
 }
 
 .post-card .card-body {
@@ -87,25 +77,4 @@ body {
   background: none;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-}
-
-#posts-in {
-  width: fit-content;
-}
-
-/* ---------- Category header ---------- */
-#category-header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  color: rgba(0, 0, 0, 0.9);
-}
-
-#category-header {
-  background-size: cover;
-  background-position: center;
-  color: rgba(0, 0, 0, 0.9);
 }
