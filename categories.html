@@ -47,116 +47,92 @@
     ></script>
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-sm custom-navbar-color p-0 m-0">
-      <div class="container-fluid p-0 m-0">
-        <a class="navbar-brand p-2" href="index.html">
-          <img
-            src="Contact%20Me/Images/Theresia_Travels_Logo_navbar.png"
-            alt="Theresia Travels Logo"
-            width="90"
-            class="d-inline-block align-text-top"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end m-0 p-0"
-          id="navbarNavAltMarkup"
-        >
-          <div class="navbar-nav">
-            <a class="nav-link" href="index.html">Home</a>
-            <a class="nav-link active" href="categories.html">Blog</a>
-            <a class="nav-link" href="about-me.html">About Me</a>
-            <a class="nav-link" href="contact-me.html">Contact Me</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <div class="container my-5">
-      <h1 class="text-center mb-5">Blog Categories</h1>
-      <div class="row">
-        <div class="col-12 col-md-4 mb-4">
-          <div
-            class="card category-card"
-            onclick="loadCategory('Technology')"
-            style="
-              background-image: url(&quot;https://picsum.photos/seed/tech/400/400&quot;);
-            "
+    <div class="content">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-sm custom-navbar-color p-0 m-0">
+        <div class="container-fluid p-0 m-0">
+          <a class="navbar-brand p-2" href="index.html">
+            <img
+              src="Contact%20Me/Images/Theresia_Travels_Logo_navbar.png"
+              alt="Theresia Travels Logo"
+              width="90"
+              class="d-inline-block align-text-top"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-            <div class="card-body d-flex align-items-end">
-              <h5 class="card-title text-white">Puebla</h5>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end m-0 p-0"
+            id="navbarNavAltMarkup"
+          >
+            <div class="navbar-nav">
+              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link active" href="categories.html">Blog</a>
+              <a class="nav-link" href="about-me.html">About Me</a>
+              <a class="nav-link" href="contact-me.html">Contact Me</a>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-4 mb-4">
-          <div
-            class="card category-card"
-            onclick="loadCategory('Health')"
-            style="
-              background-image: url(&quot;https://picsum.photos/seed/health/400/400&quot;);
-            "
-          >
-            <div class="card-body d-flex align-items-end">
-              <h5 class="card-title text-white">Oaxaca</h5>
+      </nav>
+      <div class="container" style="margin-top: 48px">
+        <h1 class="text-center mb-5">Blog Categories</h1>
+        <div class="row">
+          <div class="col-12 col-md-4 mb-4">
+            <div
+              class="card category-card"
+              onclick="loadCategory('Puebla')"
+              style="
+                background-image: url(BlogPosts/Pictures/Zacatlan/20230507_103229.JPG);
+              "
+            >
+              <div class="card-body d-flex align-items-end">
+                <h5 class="card-title text-white">Puebla</h5>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-12 col-md-4 mb-4">
-          <div
-            class="card category-card"
-            onclick="loadCategory('Travel')"
-            style="
-              background-image: url(&quot;https://picsum.photos/seed/travel/400/400&quot;);
-            "
-          >
-            <div class="card-body d-flex align-items-end">
-              <h5 class="card-title text-white">Quintana Roo</h5>
+          <div class="col-12 col-md-4 mb-4">
+            <div
+              class="card category-card"
+              onclick="loadCategory('Oaxaca')"
+              style="
+                background-image: url(BlogPosts/Pictures/PuertoEsondido/20230410_135844.jpg);
+              "
+            >
+              <div class="card-body d-flex align-items-end">
+                <h5 class="card-title text-white">Oaxaca</h5>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-12 col-md-4 mb-4">
-          <div
-            class="card category-card"
-            onclick="loadCategory('Food')"
-            style="
-              background-image: url(&quot;https://picsum.photos/seed/food/400/400&quot;);
-            "
-          >
-            <div class="card-body d-flex align-items-end">
-              <h5 class="card-title text-white">Food</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-4 mb-4">
-          <div
-            class="card category-card"
-            onclick="loadCategory('Lifestyle')"
-            style="
-              background-image: url(&quot;https://picsum.photos/seed/lifestyle/400/400&quot;);
-            "
-          >
-            <div class="card-body d-flex align-items-end">
-              <h5 class="card-title text-white">Lifestyle</h5>
+          <div class="col-12 col-md-4 mb-4">
+            <div
+              class="card category-card"
+              onclick="loadCategory('QuintanaRoo')"
+              style="
+                background-image: url(BlogPosts/Pictures/Cancun/20221227_145954.jpg);
+              "
+            >
+              <div class="card-body d-flex align-items-end">
+                <h5 class="card-title text-white">Quintana Roo</h5>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Simple Footer -->
-    <footer class="footer bg-dark text-light py-3 fixed-bottom">
+    <!-- Footer-->
+    <footer class="footer py-3">
       <div class="text-center">
-        <p class="mb-0" style="color: #faf7f7">
+        <p class="mb-0 footer-text">
           &copy; 2024 Henri Ndonko, Roxanne Collett, Theresia Deubert. All
           rights reserved.
         </p>

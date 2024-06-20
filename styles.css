@@ -5,11 +5,12 @@ body {
   min-height: 100vh;
 }
 
+
 .container {
-  background-color: #ffffff;
-  padding: 35px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #FCFAFA;
+    padding: 45px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .my-5 {
@@ -45,9 +46,17 @@ body {
   border: none;
 }
 
-.category-card,
-.post-card {
+.category-card{
   height: 200px;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.post-card {
+  height: fit-content;
   background-size: cover;
   background-position: center;
   border: none;
@@ -77,4 +86,25 @@ body {
   background: none;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+}
+
+#posts-in {
+  width: fit-content;
+}
+
+/* ---------- Category header ---------- */
+#category-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+#category-header {
+  background-size: cover;
+  background-position: center;
+  color: rgba(0, 0, 0, 0.9);
 }
