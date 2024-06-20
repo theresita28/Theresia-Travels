@@ -54,6 +54,7 @@ ul.breadcrumb li:last-child {
   text-decoration: none;
 }
 
+
 div button a {
   color: #fcfafa;
   text-decoration: none;
@@ -117,6 +118,8 @@ div button a {
   object-fit: contain;
   display: block;
   margin: 0 auto;
+  width: 80%;
+  height: auto;
 }
 
 .caption {

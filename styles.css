@@ -45,6 +45,32 @@ body {
   border: none;
 }
 
+#category-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(59, 49, 43, 0.5);
+}
+
+#category-header {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+
+  position: relative;
+  height: 10rem;
+  width: 100%;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .category-card,
 .post-card {
   height: 200px;
@@ -77,4 +103,14 @@ body {
   background: none;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+}
+
+.post-card {
+  height: fit-content;
+  width: fit-content;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  border: 1px solid #51a483;
 }
