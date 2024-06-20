@@ -19,7 +19,7 @@ body {
 }
 
 a {
-  color: #51a483;
+  color: #316852;
   word-break: break-word;
 }
 
@@ -35,6 +35,12 @@ main {
   background-color: #3b312b;
   border: none;
   color: #fcfafa;
+}
+
+.btn-center{
+  align-content: center;
+  margin-inline: auto;
+  width: fit-content;
 }
 
 .btn:hover {
