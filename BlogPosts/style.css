@@ -1,102 +1,96 @@
-body{
-    background-color: #faeff0;
-    color: #3B312B;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 1rem;
+body {
+  background-color: #faeff0;
+  color: #3b312b;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 1rem;
 }
 
 li span {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /*---------------------Breadcrumb menu-------------------------------------------------------------------------*/
 /* Style the list */
 ul.breadcrumb {
-    padding: 0.6rem 0.1rem;
-    list-style: none;
-
+  padding: 0.6rem 0.1rem;
+  list-style: none;
 }
 
 /* Display list items side by side */
 ul.breadcrumb li {
-    display: inline;
-    font-size: 1.2rem;
+  display: inline;
+  font-size: 1.2rem;
 }
 
 /* Add a slash symbol (/) before/behind each list item */
-ul.breadcrumb li+li:before {
-    padding: 0.5rem;
-    color: #3B312B;
-    content: "/\00a0";
+ul.breadcrumb li + li:before {
+  padding: 0.5rem;
+  color: #3b312b;
+  content: "/\00a0";
 }
 
 /* Add a color to all links inside the list */
 ul.breadcrumb li a {
-    color: #3B312B;
-    text-decoration: none;
+  color: #3b312b;
+  text-decoration: none;
 }
 
 /* Add a color on mouse-over */
 ul.breadcrumb li a:hover {
-    color: #3b312b;
-    text-decoration: underline;
+  color: #3b312b;
+  text-decoration: underline;
 }
 
 ul.breadcrumb li:last-child {
-    color: #51a483;
+  color: #51a483;
 }
-
-
 
 /*Button*/
 .btn {
-    text-align: center;
-    align-content: center;
-    display: inline-block;
-    border-radius: 10%;
-    text-decoration: none;
+  text-align: center;
+  align-content: center;
+  display: inline-block;
+  border-radius: 10%;
+  text-decoration: none;
 }
-
 
 div button a {
-    color: #fcfafa;
-    text-decoration: none;
+  color: #fcfafa;
+  text-decoration: none;
 }
-
 
 /*-------------------------------Gallery with Lightbox Effect---------------------------*/
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-    justify-content: center;
-    /*overflow: hidden;*/
-    margin: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  /*overflow: hidden;*/
+  margin: 2rem;
 }
 
 .gallery-item {
-    flex: 1 1 calc(25% - 10px);
-    position: relative;
-    /*padding-top: 56.25%; /* 16:9 Aspect Ratio */
-    box-sizing: border-box;
-    min-width: 8.8rem;
-    /*height: 10rem;*/
-    overflow: hidden;
-    max-width: 50%;
-
-
+  flex: 1 1 25%;
+  position: relative;
+  /*padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  box-sizing: border-box;
+  min-width: 8.8rem;
+  /*height: 10rem;*/
+  overflow: clip;
+  max-width: 90%;
 }
 
-.gallery-item img, .gallery-item video {
-    /*position: absolute;
+.gallery-item img,
+.gallery-item video {
+  /*position: absolute;
     top: 0;
     left: 0; */
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.2s;
-    border-radius: 10%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s;
+  border-radius: 10%;
 }
 
 /* .gallery img:hover {
@@ -104,67 +98,63 @@ div button a {
 } */
 
 .lightbox {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    padding-top: 3.8rem;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;  /*hidden?*/
-    background-color: rgba(0, 0, 0, 0.9);
-
-
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 3.8rem;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /*hidden?*/
+  background-color: rgba(59, 49, 43, 0.95);
 }
 
-.lightbox-content img,
-.lightbox-content video {
-    margin: auto;
-    display: block;
-    width: 80%;
-    height: auto;
-    max-width: 44rem;
-    max-height: 37rem;;  /*85 %*/
-
+.lightbox img,
+.lightbox video {
+  max-width: 85vw;
+  max-height: 85vh;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
 .caption {
-    display: block;
-    width: 80%;
-    max-width: 44rem;
-    text-align: center;
-    color: #ccc;
-    padding: 0.6rem 0;
-    margin: auto auto 1.3rem;
+  display: block;
+  width: 80%;
+  max-width: 44rem;
+  text-align: center;
+  color: #ccc;
+  padding: 0.6rem 0;
+  margin: auto auto 1.3rem;
 }
 
 .close,
 .prev,
 .next {
-    position: absolute;
-    top: 50%;
-    color: #f1f1f1;
-    font-size: 2.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    user-select: none;
-    transition: 0.3s;
+  position: absolute;
+  top: 50%;
+  color: #f1f1f1;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.3s;
 }
 
 .close {
-    top: 1rem;
-    right: 2.2rem;
+  top: 1rem;
+  right: 2.2rem;
 }
 
 .prev {
-    left: 0;
-    transform: translateY(-50%);
+  left: 0;
+  transform: translateY(-50%);
 }
 
 .next {
-    right: 0;
-    transform: translateY(-50%);
+  right: 0;
+  transform: translateY(-50%);
 }
 
 .close:hover,
@@ -173,19 +163,18 @@ div button a {
 .prev:focus,
 .next:hover,
 .next:focus {
-    color: #bbb;
+  color: #bbb;
 }
 
 /*-----------------------------Map---------------------------------------------------*/
 #map-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 1rem;
 }
 #map {
-    height: 20em;
-    width: 80%;
-
+  height: 20em;
+  width: 80%;
 }
