@@ -1,83 +1,80 @@
 body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .container {
-    background-color: #ffffff;
-    padding: 35px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .my-5 {
-    width: fit-content;
-    height: fit-content;
+  width: fit-content;
+  height: fit-content;
 }
 
 .profile-pic {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    margin-bottom: 20px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 20px;
 }
 
-.social-media a {
-    text-decoration: none;
-    color: #3b312b;
+.fab {
+  text-decoration: none;
+  color: #3b312b;
 }
 
-.social-media a:hover {
-    color: #5bae8d;
+.fab:hover {
+  color: #5bae8d;
 }
 
-.btn-primary {
-    background-color: #3b312b;
-    border: none;
+.btn-secondary {
+  background-color: #3b312b;
+  color: #fcfafa;
+  border: none;
 }
 
-.btn-primary:hover {
-    background-color: #5bae8d;
-    border: none;
+.btn-secondary:hover {
+  background-color: #5bae8d;
+  color: #fcfafa;
+  border: none;
 }
 
-footer.footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 1000;
-    color: #faf7f7;
+.category-card,
+.post-card {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 
-.category-card, .post-card {
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.2s;
+.category-card:hover,
+.post-card:hover {
+  transform: scale(1.05);
 }
 
-.category-card:hover, .post-card:hover {
-    transform: scale(1.05);
-}
-
-.category-card .card-body, .post-card .card-body {
-    background: rgba(59, 49, 43, 0.5);
-    border-radius: 10px;
-    color: #fcfafa;
+.category-card .card-body,
+.post-card .card-body {
+  background: rgba(59, 49, 43, 0.5);
+  border-radius: 10px;
+  color: #fcfafa;
 }
 
 .post-card img {
-    height: 200px;
-    object-fit: cover;
+  height: 200px;
+  object-fit: cover;
 }
 
 .post-card .card-body {
-    color: #3b312b;
-    background: none;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+  color: #3b312b;
+  background: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }

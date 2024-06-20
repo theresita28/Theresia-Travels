@@ -12,12 +12,22 @@ h1 {
 body {
   background-color: #faf7f7;
   padding-top: 60px;
-  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 a {
-  color: #5bae8d;
+  color: #51a483;
   word-break: break-word;
+}
+
+a:hover {
+  color: #3b312b;
+}
+
+.content {
+  flex: 1;
 }
 
 /* ---------- Navbar ---------- */
@@ -72,9 +82,16 @@ a {
   background-color: rgba(81, 164, 131, 0.3);
 }
 
-/* ---------- Icons ---------- */
-.bi {
-  font-size: 1.5rem;
-  margin: 0.3rem;
-  color: #3b312b;
+/* ---------- Footer ---------- */
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: #3b312b;
+  margin-top: auto;
+}
+
+.footer-text {
+  color: #fcfafa;
+  font-size: small;
 }

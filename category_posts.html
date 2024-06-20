@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,12 +6,10 @@
     <title>Category Posts</title>
     <link
       rel="stylesheet"
-      href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    />
+      href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
 
     <!-- Bootstrap -->
@@ -19,8 +17,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous" />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="default.css" />
@@ -30,79 +27,74 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
 
     <!-- Bootstrap Icons -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
     <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
-      defer
-    ></script>
+      defer></script>
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-sm custom-navbar-color p-0 m-0">
-      <div class="container-fluid p-0 m-0">
-        <a class="navbar-brand p-2" href="index.html">
-          <img
-            src="Contact%20Me/Images/Theresia_Travels_Logo_navbar.png"
-            alt="Theresia Travels Logo"
-            width="90"
-            class="d-inline-block align-text-top"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end m-0 p-0"
-          id="navbarNavAltMarkup"
-        >
-          <div class="navbar-nav">
-            <a class="nav-link" href="index.html">Home</a>
-            <a class="nav-link active" href="categories.html">Blog</a>
-            <a class="nav-link" href="about-me.html">About Me</a>
-            <a class="nav-link" href="contact-me.html">Contact Me</a>
+    <div class="content">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-sm custom-navbar-color p-0 m-0">
+        <div class="container-fluid p-0 m-0">
+          <a class="navbar-brand p-2" href="index.html">
+            <img
+              src="Contact%20Me/Images/Theresia_Travels_Logo_navbar.png"
+              alt="Theresia Travels Logo"
+              width="90"
+              class="d-inline-block align-text-top" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end m-0 p-0"
+            id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link active" href="categories.html">Blog</a>
+              <a class="nav-link" href="about-me.html">About Me</a>
+              <a class="nav-link" href="contact-me.html">Contact Me</a>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
-    <div
-      id="category-header"
-      class="container-fluid text-center text-light py-5"
-      style="background-size: cover; background-position: center"
-    >
-      <h1 class="display-4" id="category-title"></h1>
+      <div
+        id="category-header"
+        class="container-fluid text-center text-light py-5"
+        style="background-size: cover; background-position: center">
+        <h1 class="display-4" id="category-title"></h1>
+      </div>
+
+      <div class="container my-5">
+        <h2 class="mb-4">Posts in <span id="category-name"></span></h2>
+        <div id="posts-list" class="row">
+          <!-- Posts will be dynamically loaded here -->
+        </div>
+      </div>
     </div>
 
-    <div class="container my-5">
-      <h2 class="mb-4">Posts in <span id="category-name"></span></h2>
-      <div id="posts-list" class="row">
-        <!-- Posts will be dynamically loaded here -->
-      </div>
-    </div>
-
-    <!-- Simple Footer -->
-    <footer class="footer bg-dark text-light py-3 fixed-bottom">
+    <!-- Footer-->
+    <footer class="footer py-3">
       <div class="text-center">
-        <p class="mb-0" style="color: #faf7f7">
+        <p class="mb-0 footer-text">
           &copy; 2024 Henri Ndonko, Roxanne Collett, Theresia Deubert. All
           rights reserved.
         </p>
@@ -208,8 +200,9 @@
           ],
         };
 
-        document.getElementById("category-header").style.backgroundImage =
-          `url(${headerImage[category]})`;
+        document.getElementById(
+          "category-header"
+        ).style.backgroundImage = `url(${headerImage[category]})`;
         document.getElementById("category-title").textContent = category;
         document.getElementById("category-name").textContent = category;
 
